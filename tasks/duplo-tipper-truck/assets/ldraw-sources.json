@@ -1,0 +1,1830 @@
+[
+  {
+    "file": "p/1-16chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-16chrd.dat",
+    "sha256": "e429dd760eb6f0cf460a74e6ebf52c023bedbdea82de7801efa1694b5a1a82e8",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2015-10-11 [PTadmin] Official Update 2015-01"
+    ]
+  },
+  {
+    "file": "p/1-16edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-16edge.dat",
+    "sha256": "42fc4d69af1281b71cb2eb9546e99e8bca2fc231d05a0379e71d4e1c9a60c95c",
+    "attribution": [
+      "0 Author: Marc Klein [marckl]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-03-02 [PTadmin] Official Update 2004-01",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/1-4chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4chrd.dat",
+    "sha256": "ccba3a97b5cc358754e476b78b4ce61cce5f404cd15e37471b73df3e81784aec",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-04-22 [PTadmin] Official Update 2004-02",
+      "0 !HISTORY 2007-10-09 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-08-02 [MMR1988] Re-creation with PrimGen2 and Rectifier",
+      "0 !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02",
+      "0 !HISTORY 2023-10-27 [OrionP] Change author to MMR1988 from hafhead",
+      "0 !HISTORY 2023-10-31 [OrionP] Official Update 2023-05"
+    ]
+  },
+  {
+    "file": "p/1-4con1.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4con1.dat",
+    "sha256": "da6bd834f802df4f9d87cf03ad7b425dcdfa257555beca40c9ae62f9352ecaa0",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05",
+      "0 !HISTORY 2002-12-11 [cwdee] Standardise title and decimal places",
+      "0 !HISTORY 2003-05-25 [bbroich] replaced 5 16 with 5 24",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Recreated CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01",
+      "0 !HISTORY 2024-01-18 [Holly-Wood] Complete regeneration, original by Karim Nassar",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/1-4cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4cyli.dat",
+    "sha256": "5a7168952a5a3570327873b9a5802fa7b3be40967ab78c03b6a2bfd4419a1f10",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC statement.",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/1-4cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4cylo.dat",
+    "sha256": "792a01362608c3f385dd7f01a1bd7d19cf9ed8a40f793266345cc86d1d98f3af",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-12-31 [PTadmin] Official Update 2010-03"
+    ]
+  },
+  {
+    "file": "p/1-4cyls.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4cyls.dat",
+    "sha256": "aaee6ffe6e4a191d6cad4496677132eb0349303d6e48c13c7a2240dcea1db621",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-07-03 [sbliss] Added BFC statement",
+      "0 !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/1-4edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4edge.dat",
+    "sha256": "9ce2de7e67bbac575d52cfdc771b9d00856efc9b88002d97db8e665e50f4d467",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/1-4ndis.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4ndis.dat",
+    "sha256": "ff6685838636e7ab6152356d8f09e4f00a38af0d878b0881423f5c45fb868f0c",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC Statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/1-4ring7.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4ring7.dat",
+    "sha256": "c58f1ebaec67452bbdf41be056b371a61c79c2a0fa5327c37e3e88d453b8bc5d",
+    "attribution": [
+      "0 Author: Franklin W. Cain [fwcain]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01",
+      "0 !HISTORY 2021-10-15 [Lasse_Deleuran] Fixed rounding error",
+      "0 !HISTORY 2022-05-07 [PTadmin] Official Update 2022-03"
+    ]
+  },
+  {
+    "file": "p/1-4tang.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-4tang.dat",
+    "sha256": "4eb5b51b824675756efd7e74e1141aaeaa9520517754d3bd0cfc1f591a0e04b4",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2011-12-29 [PTadmin] Official Update 2011-02",
+      "0 !HISTORY 2024-01-08 [Holly-Wood] Complete re-write, original by westrate",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/1-8chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8chrd.dat",
+    "sha256": "7694157b725563188a6efd69b3f558b00533b375b8a4e82f469497a03e471e74",
+    "attribution": [
+      "0 Author: Orion Pobursky [OrionP]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-04-22 [PTadmin] Official Update 2004-02",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2023-10-27 [OrionP] Rebuilt with PrimGen2, original author westrate",
+      "0 !HISTORY 2023-10-31 [OrionP] Official Update 2023-05"
+    ]
+  },
+  {
+    "file": "p/1-8cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8cyli.dat",
+    "sha256": "46def63dc8293ad9a2dd1d1a5cb720b9ba883850e65d3280d2093c664a6140c4",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2004-12-11 [nielsk] Recreated using Primitive Generator, Edge lines fixed, BFC changed to CCW",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/1-8cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8cylo.dat",
+    "sha256": "870bbbf6052e075598de7dce7efe7a139ea5189820e7a296442fe2b3318c18bf",
+    "attribution": [
+      "0 Author: Tim Gould [timgould]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2012-12-28 [PTadmin] Official Update 2012-03"
+    ]
+  },
+  {
+    "file": "p/1-8edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8edge.dat",
+    "sha256": "50436a0bce461198c342dccbccb658a1bffae13e44b7c48689b158c946c2c2ab",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/1-8ring4.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8ring4.dat",
+    "sha256": "08954a02988b658890a539ae61db3e6225a587bd52b2e160c4f292d37629cc3d",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2024-01-14 [Holly-Wood] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/1-8sphe.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8sphe.dat",
+    "sha256": "c38f9b8df6f260a26e920d8bbfb2d6b11667026e0675733d7fc2d3653ef92c53",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2000-08-01 {Axel Poque} fixes to resolve L3P error messages.",
+      "0 !HISTORY 2000-08-01 {Manfred Moolhuysen} fixes to resolve L3P error messages.",
+      "0 !HISTORY 2000-09-30 [PTadmin] Official Update 2000-02",
+      "0 !HISTORY 2002-03-28 [hafhead] Made BFC compliant",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-22 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-09-12 [MagFors] Changed winding, removed duplicated cond-line, optimized filesize",
+      "0 !HISTORY 2010-12-31 [PTadmin] Official Update 2010-03",
+      "0 !HISTORY 2012-07-01 [tcobbs] Replaced with geometry from LDView",
+      "0 !HISTORY 2012-12-28 [PTadmin] Official Update 2012-03"
+    ]
+  },
+  {
+    "file": "p/1-8tang.dat",
+    "url": "https://library.ldraw.org/library/official/p/1-8tang.dat",
+    "sha256": "4f412bd10e7dd081272e6fcbf7480674b639d48e35437c6d006f5bad099e4af6",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2005-08-03 [OrionP] Updated to conform to 1-4tang.dat",
+      "0 !HISTORY 2011-12-29 [PTadmin] Official Update 2011-02"
+    ]
+  },
+  {
+    "file": "p/2-4chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4chrd.dat",
+    "sha256": "3b0dfcf2cb881fae0acfe1e53b703104768878636477e540d0c893fc3fd87f8f",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2014-06-21 [PTadmin] Official Update 2014-01"
+    ]
+  },
+  {
+    "file": "p/2-4con3.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4con3.dat",
+    "sha256": "1428ba9e3e813a1f1b778308cc9e77ac249e16f1976f72773545165173e1314e",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02",
+      "0 !HISTORY 2018-01-29 [Philo] Regenerated for tangent condlines on ends",
+      "0 !HISTORY 2018-12-08 [PTadmin] Official Update 2018-02",
+      "0 !HISTORY 2024-01-18 [Holly-Wood] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/2-4cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4cyli.dat",
+    "sha256": "d486780f0f84893899d9eadcd13150f13a42e15e77a3cda38cdf24ded98862c6",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC statement; compacted code",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2004-12-11 [nielsk] Recreated using Primitive Generator, Edge lines fixed, BFC changed to CCW",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/2-4cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4cylo.dat",
+    "sha256": "4fa9f597d775c7f15e3fc66f60e20d914134d13004b485488b7dbff684776232",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-12-31 [PTadmin] Official Update 2010-03"
+    ]
+  },
+  {
+    "file": "p/2-4edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4edge.dat",
+    "sha256": "665400f76566b161c28303cdadce40d17d979a8ff9a8a133675af2d17fbe6763",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/2-4ndis.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4ndis.dat",
+    "sha256": "7557eae598be3f530b840471535198e6b07b03486ffbcc18a00e862c3d25d925",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC statement; compacted code",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/2-4ring3.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4ring3.dat",
+    "sha256": "045613f5bb90e0c283211b1fa261cc66f8ee8ab968dc9763222e7e592cbf83fc",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2003-01-21 [cavehop] Update Added BFC and some header info",
+      "0 !HISTORY 2003-03-12 [PTadmin] Official Update 2003-01",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/2-4ring5.dat",
+    "url": "https://library.ldraw.org/library/official/p/2-4ring5.dat",
+    "sha256": "2d4ec24b3b5da12202307ab0a6f1615d16c3ae6a411a5b17b5a431d3880344ed",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-12-19 [PTadmin] Official Update 2003-03",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01",
+      "0 !HISTORY 2024-01-11 [Holly-Wood] Complete regeneration, original by glbarnes",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/3-16chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-16chrd.dat",
+    "sha256": "2bb493e8b5b56a5d63bfa7356a0ed5d6403a68e5e9a983e13a57541783ad19c1",
+    "attribution": [
+      "0 Author: Niels Karsdorp [nielsk]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01"
+    ]
+  },
+  {
+    "file": "p/3-16cyli.dat",
+    "url": "",
+    "sha256": "f50d12a37a22ae4a5f37a017b8e39d1e729577b0a4aa376ca685b210806b49c8",
+    "attribution": [
+      "0 Author: Mark Kennedy [mkennedy]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-03-02 [PTadmin] Official Update 2004-01",
+      "0 !HISTORY 2004-12-11 [nielsk] Recreated using Primitive Generator, Edge lines fixed, BFC changed to CCW",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/3-16cylo.dat",
+    "url": "",
+    "sha256": "a5c8370842299035a9cc14308301614c6fb169fb873a7950c888928cd8d9181c",
+    "attribution": [
+      "0 Author: J.C. Tchang [tchang]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/3-16disc.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-16disc.dat",
+    "sha256": "2510025cac256794c55c2565e53ccf6bb83a206b946d12f3d51e05d462c2cb4f",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-17 [Holly-Wood] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/3-16edge.dat",
+    "url": "",
+    "sha256": "c08dd83bb7fe90b61f7cd0b10ebef0d9a9ba33b497676dedd2e2e968cb8248f9",
+    "attribution": [
+      "0 Author: Donald Sutter [technog]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-03-02 [PTadmin] Official Update 2004-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/3-16ndis.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-16ndis.dat",
+    "sha256": "abb7da370e72fe9e75faf5d10c637b476202dbd8ced9cb5b0f96433e1f72f529",
+    "attribution": [
+      "0 Author: Magnus Forsberg [MagFors]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-03 [MagFors] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/3-16ring2.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-16ring2.dat",
+    "sha256": "39481beacecc688590dff4d877e177657d133fbaee449ad60f346c18ccce3d3d",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03",
+      "0 !HISTORY 2024-03-23 [OrionP] Moved from 3-16rin2.dat",
+      "0 !HISTORY 2024-03-24 [OrionP] Official Update 2024-02"
+    ]
+  },
+  {
+    "file": "p/3-16tang.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-16tang.dat",
+    "sha256": "885c0d73076a80315960cce8e87214bbee637fc547d1c6fc19b5c807e693f29b",
+    "attribution": [
+      "0 Author: Massimo Maso [Sirio]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2022-05-07 [PTadmin] Official Update 2022-03"
+    ]
+  },
+  {
+    "file": "p/3-8cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-8cyli.dat",
+    "sha256": "9224d4e5edc6f5b0f75f6fa358fd1368a4fd65f676b74fe1bb6e3bbb05046206",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-05-08 [OrionP] Made BFC compliant",
+      "0 !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04",
+      "0 !HISTORY 2004-12-11 [nielsk] Recreated using Primitive Generator, Edge lines fixed, BFC changed to CCW",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/3-8cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-8cylo.dat",
+    "sha256": "f5e90ea29201b4cea569e2effe32eee5fe95146e3eadcddc054a881ef4f839bd",
+    "attribution": [
+      "0 Author: J.C. Tchang [tchang]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/3-8edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/3-8edge.dat",
+    "sha256": "a590f230678d592d514a9c5e307c6a30945e50e4c529fc06accf37530d0e0ed5",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/4-4con4.dat",
+    "url": "",
+    "sha256": "7c49737dec9819a49e43d7af5926c05d8a1a1226bc0f2cb15cbe7cddb035f00b",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01",
+      "0 !HISTORY 2024-01-07 [Holly-Wood] Complete regeneration, original by jriley",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/4-4cylc.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4cylc.dat",
+    "sha256": "0183cffc7f56a2f3e5e3511f0d07ac484d3039c2d41bee802a94344ec95ec8bd",
+    "attribution": [
+      "0 Author: Alex Taylor [anathema]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2008-12-29 [cwdee] Removed one disc",
+      "0 !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02"
+    ]
+  },
+  {
+    "file": "p/4-4cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4cyli.dat",
+    "sha256": "4a742c2765b6ebf98245baaf8a160a4ff587fc93d36c8ee2b9074712a2f968c4",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC statement; merged headers from files in distributions LDraw 0.27 and Complete.",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2004-12-14 [guyvivan] BFC CCW",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/4-4cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4cylo.dat",
+    "sha256": "d6ca97ee2e75918b3309a5c88aafcd2455b3a316f7cef8963517c19f1d86b38f",
+    "attribution": [
+      "0 Author: Mark Kennedy [mkennedy]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01"
+    ]
+  },
+  {
+    "file": "p/4-4disc.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4disc.dat",
+    "sha256": "a00b5547776f61a7389d303616987c76b3c4de86ad8ec32f22857e1bd5e5e40f",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/4-4edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4edge.dat",
+    "sha256": "54a52196e421fd1717d291ff52ea57553b1fb238907c1678cc1f1a84c698b1da",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-15 [Steffen] BFCed",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/4-4ndis.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4ndis.dat",
+    "sha256": "21202dc15823f4336bc2544244d0b539b76745c89f7a59ad18cdd03ad45cc543",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-03-23 [sbliss] Added BFC statement; compacted code",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/4-4ring2.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4ring2.dat",
+    "sha256": "6fb38804b1f5e9bee8c0b80caf1397b09454fc58b048dc19045b6f37c8762ab0",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-04-05 [hafhead] Added BFC statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2008-08-26 [cwdee] Switch polygon winding and rename",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01"
+    ]
+  },
+  {
+    "file": "p/4-4ring3.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4ring3.dat",
+    "sha256": "1f2835ac308154edc2d6f479d8e742a55be981f6167b20bfa100c195bc0731dd",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-04-05 [hafhead] Added BFC statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2008-08-26 [cwdee] Switch polygon winding and rename",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01"
+    ]
+  },
+  {
+    "file": "p/4-4ring4.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4ring4.dat",
+    "sha256": "e046737f05ca843c7fc32bbfe9f5b26f3409c5b42b786d8809aa789faf761154",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-04-08 [BrickCaster] Modified for BFC compliance",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2008-08-26 [cwdee] Switch polygon winding and rename",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01"
+    ]
+  },
+  {
+    "file": "p/4-4ring5.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4ring5.dat",
+    "sha256": "ca5a04efffaad8671c935fed492ee397b1b91f854079257b033e87fcca3580b1",
+    "attribution": [
+      "0 Author: Mark Kennedy [mkennedy]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2001-10-23 [pneaster] resequenced quads, corrected winding.",
+      "0 !HISTORY 2001-12-29 [pneaster] Added BFC.",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01",
+      "0 !HISTORY 2024-12-30 [MagFors] Recreated using PrimGen",
+      "0 !HISTORY 2025-01-20 [OrionP] Official Update 2025-01"
+    ]
+  },
+  {
+    "file": "p/4-4ring7.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-4ring7.dat",
+    "sha256": "67b27c082eec7286888ac427f11db06c5eca6c9bcec76c7e2b2014841afa83f3",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-12-15 [PTadmin] Official Update 1998-10",
+      "0 !HISTORY 2002-04-05 [hafhead] Added BFC statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2008-08-26 [cwdee] Switch polygon winding and rename",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01"
+    ]
+  },
+  {
+    "file": "p/4-8sphe.dat",
+    "url": "https://library.ldraw.org/library/official/p/4-8sphe.dat",
+    "sha256": "37fa33d0b13605e0e1a84b8e0917953d42beebee08dc444e1bd44015acd64d9e",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-08-31 [izanette] Modified with WINDZ for BFC compliance",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/48/1-12chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-12chrd.dat",
+    "sha256": "fe2a0252d971dc65126755c4fdb7db900e229dfdce712b42ce9510c7b0390e26",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-09 [Holly-Wood] Complete re-write, original by westrate",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-12edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-12edge.dat",
+    "sha256": "c1320fa098058f1bb4bb73a4bd02a9533bdcc4f22ac4a0f0a1dcd5cdf85deaed",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-07 [Holly-Wood] Complete regeneration, original by westrate",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-12tndis.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-12tndis.dat",
+    "sha256": "3f529632b6b106417845f683f40f3666b191e421233e9ffebc6d8b89e6b0767b",
+    "attribution": [
+      "0 Author: Magnus Forsberg [MagFors]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2024-06-30 [OrionP] Official Update 2024-05"
+    ]
+  },
+  {
+    "file": "p/48/1-16cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-16cyli.dat",
+    "sha256": "b6fb5e76f958a18c4cc88866d5e6a0502b62d3abda1a72450663b82502645330",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-10 [Holly-Wood] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-16cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-16cylo.dat",
+    "sha256": "94929f851cefec060fcf3222213a1f9743f9b6549a9e7bbcf471482dc546a827",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/48/1-16edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-16edge.dat",
+    "sha256": "9b3b4df68d3c0d68fd3e5c52346871867043f67522e53aaa21991562c89bdc10",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-09 [Holly-Wood] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-16tndis.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-16tndis.dat",
+    "sha256": "0da96332426c7338615e569de80f8fbf92c0a35703d02dfe43cf6faecc1e00c2",
+    "attribution": [
+      "0 Author: Massimo Maso [Sirio]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2022-05-07 [PTadmin] Official Update 2022-03"
+    ]
+  },
+  {
+    "file": "p/48/1-24cyls.dat",
+    "url": "",
+    "sha256": "c6c3294bca84f283bcdff769d01e1a8694205de0d7e66ef95d0bf29577fe8acb",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2023-08-25 [OrionP] Official Update 2023-04"
+    ]
+  },
+  {
+    "file": "p/48/1-24edge.dat",
+    "url": "",
+    "sha256": "0946112b54d72f44d95d9f48b652bec53468f05eaacb2503ca09f58bee518e04",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2010-01-11 [cwdee] Correct description dimension",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01",
+      "0 !HISTORY 2024-01-09 [Holly-Wood] Complete regeneration, original by SirBugge",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-4aring.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-4aring.dat",
+    "sha256": "8d67989822c019531862f5c2d5cc724145f5e81e00121433065d3fce3b52dac2",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01",
+      "0 !HISTORY 2024-02-07 [Holly-Wood] Changed 'Adaptor' to 'Adapter' in description",
+      "0 !HISTORY 2024-03-24 [OrionP] Official Update 2024-02"
+    ]
+  },
+  {
+    "file": "p/48/1-4chrd.dat",
+    "url": "",
+    "sha256": "a735a3d5f7652eb4c1ec7fd2fc2d6fcbb0d54cd647cb92c60e64dd3ba000b0a1",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2012-08-02 [MMR1988] Re-creation with PrimGen2 and Rectifier",
+      "0 !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02",
+      "0 !HISTORY 2024-01-04 [Holly-Wood] Complete re-write, original by westrate",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-4cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-4cyli.dat",
+    "sha256": "e2ed297feaf608b7319c2e54cd81dcb653fbb3d87b5a8e48ab2f54b32953fc6b",
+    "attribution": [
+      "0 Author: Magnus Forsberg [MagFors]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05",
+      "0 !HISTORY 2002-02-28 [hafhead] Added BFC statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2008-07-07 [guyvivan] Made BFC'ed CCW (2005-12-06)",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-03 [MagFors] Complete regeneration, original by Manfred Moolhuysen",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-4cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-4cylo.dat",
+    "sha256": "93f7305e7575678ae00336972ca5078611c37a02d9755865d38cea4ff122c345",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/48/1-4edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-4edge.dat",
+    "sha256": "e4ebabd21711f16411b3c8b8b278995a56c5f25919cd424976357da5b19943c6",
+    "attribution": [
+      "0 Author: Magnus Forsberg [MagFors]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-03-17 [MagFors] Updated description",
+      "0 !HISTORY 2010-05-21 [mikeheide] BFC'ed and compacted numbers (saved 10% filesize)",
+      "0 !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02",
+      "0 !HISTORY 2024-01-02 [MagFors] Complete regeneration, original by Manfred Moolhuysen",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-4ring9.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-4ring9.dat",
+    "sha256": "08cf8697a97526c9636b00578b792ef8452d3f74d7615e3a1d5644417908b42a",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-27 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02",
+      "0 !HISTORY 2014-12-20 [MMR1988] Fixed a rounding issue",
+      "0 !HISTORY 2014-12-23 [PTadmin] Official Update 2014-02"
+    ]
+  },
+  {
+    "file": "p/48/1-8chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-8chrd.dat",
+    "sha256": "282b0d7dd4e73d273b9cbcce88e30889cce3b44aa8574a25382fe526248d5426",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01",
+      "0 !HISTORY 2024-01-04 [Holly-Wood] Complete re-write, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/1-8cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-8cyli.dat",
+    "sha256": "494069ca353e41885bf8f5b6b3ddc9b62aabeca3eedfe6aa5597ac8f12ca12b9",
+    "attribution": [
+      "0 Author: Steve Bliss [sbliss]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2000-05-07 [PTadmin] Official Update 2000-01",
+      "0 !HISTORY 2004-10-12 [sbliss] fixed title, BFC'ed",
+      "0 !HISTORY 2004-11-06 [PTadmin] Official Update 2004-04",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/48/1-8edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/1-8edge.dat",
+    "sha256": "eec30153f06bac336ca71ae16b31c5d0c7ae432acb5e91befe37fdb7b6bb1c8e",
+    "attribution": [
+      "0 Author: [PTadmin]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2000-09-30 [PTadmin] Official Update 2000-02",
+      "0 !HISTORY 2007-10-13 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2017-01-17 [Steffen] added BFC CERTIFY statement",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/48/11-48cyli.dat",
+    "url": "",
+    "sha256": "30ab107d0dbcb5248d2a8c4cd42ee17f73e76db72023fb0f03427bbfe42c9e36",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2020-06-28 [PTadmin] Official Update 2020-01"
+    ]
+  },
+  {
+    "file": "p/48/11-48edge.dat",
+    "url": "",
+    "sha256": "5c1a850613a4b61fab52a57e33adad63611b9a25d04f92f6528779477be8e2e9",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2020-06-28 [PTadmin] Official Update 2020-01"
+    ]
+  },
+  {
+    "file": "p/48/4-4aring.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/4-4aring.dat",
+    "sha256": "4c0d575f91df941b5d3313427d699813cc3cf9f09c334cbad7a0eceeaf98f573",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02"
+    ]
+  },
+  {
+    "file": "p/48/4-4cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/4-4cyli.dat",
+    "sha256": "6c466cd94f69ecdb3a5a83faee52ad2e5ecd9d1560975feaf854c3433de6e6a2",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-27 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02"
+    ]
+  },
+  {
+    "file": "p/48/4-4cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/4-4cylo.dat",
+    "sha256": "ce018b080f8d657ed514164b995e119e9ea104a03cd84e6a6f736b40f58252a6",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01"
+    ]
+  },
+  {
+    "file": "p/48/4-4edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/4-4edge.dat",
+    "sha256": "db8fd751c8c6b1f72211903adbff3aa90be6808cc4fcff391f1c320adced5da7",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-01-15 [MagFors] BFC'ed, title changed from Edge to Circle",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/48/4-4ring9.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/4-4ring9.dat",
+    "sha256": "d8de1753705319aa11a189b579323b778c9b6cf4869360e698c64a8a0cdbf3d2",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-08-18 [PTadmin] Official Update 2002-04",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-27 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02"
+    ]
+  },
+  {
+    "file": "p/48/5-24cyli.dat",
+    "url": "",
+    "sha256": "32b15a6570d6f5534a620e667a26b86298596ed9d064a0a9b1886d413c345658",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03",
+      "0 !HISTORY 2024-01-16 [Holly-Wood] Complete regeneration, original by guyvivan",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/48/5-24cylo.dat",
+    "url": "",
+    "sha256": "f6b98815d032ae56c7e0bcc3bd02c2295e0fea90c4bb8c8c7bf9207c0500f71a",
+    "attribution": [
+      "0 Author: Max Martin Richter [MMR1988]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/48/5-24edge.dat",
+    "url": "",
+    "sha256": "98f6635f6593350b1a5987341291fc1cf17674c28ced8a421a69d1ec17b39575",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03"
+    ]
+  },
+  {
+    "file": "p/48/5-48edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/5-48edge.dat",
+    "sha256": "6310e55c91d0c6bba9b6d28372fe61069ac01b95614cfbbe6ddbb5649fc8cadb",
+    "attribution": [
+      "0 Author: Alex Taylor [anathema]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01"
+    ]
+  },
+  {
+    "file": "p/48/7-48chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/48/7-48chrd.dat",
+    "sha256": "08c88108a9f3dbf0f1bbcd27603992bc667ccee0223c09ec5eee796b1ebbbe58",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/48/7-48cyli.dat",
+    "url": "",
+    "sha256": "3831e1dc5dc2424a03be0af4ba8776993cbb796d27beb1e52abf7558ad3ef1b5",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/48/7-48edge.dat",
+    "url": "",
+    "sha256": "9e55997b6fd34c8534c044519bee7e53775a4cc20d3d2ce12ca6a1f63ca4c927",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/5-16cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/5-16cyli.dat",
+    "sha256": "3a46e175cd13f2343645b5ba1be54f1f2fdf446cf28392383d511d85eaa7665a",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03"
+    ]
+  },
+  {
+    "file": "p/5-16edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/5-16edge.dat",
+    "sha256": "17a9ae47e68e98286d27fc7be4a48e1110d1cae0d3abff658f3378a552857fc3",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-12-29 [PTadmin] Official Update 2009-03"
+    ]
+  },
+  {
+    "file": "p/8/1-4chrd.dat",
+    "url": "https://library.ldraw.org/library/official/p/8/1-4chrd.dat",
+    "sha256": "dc080d295da1d9732d9346882608078f6b32c4cf75d2a6174ecc16fdcf1e20c9",
+    "attribution": [
+      "0 Author: Magnus Forsberg [MagFors]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2018-12-08 [PTadmin] Official Update 2018-02"
+    ]
+  },
+  {
+    "file": "p/8/1-4cyli.dat",
+    "url": "https://library.ldraw.org/library/official/p/8/1-4cyli.dat",
+    "sha256": "a9e8266ebf4bdb75f8ac643596e29e3069cc88697a379e4b116fa59b1c138bbf",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2016-12-31 [PTadmin] Official Update 2016-01"
+    ]
+  },
+  {
+    "file": "p/8/1-4cylo.dat",
+    "url": "https://library.ldraw.org/library/official/p/8/1-4cylo.dat",
+    "sha256": "d0b0c3568d1ec7160378aec8e90a9ac101c6bd4398ea9d70c15feeb6f2574211",
+    "attribution": [
+      "0 Author: Magnus Forsberg [MagFors]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2018-12-08 [PTadmin] Official Update 2018-02"
+    ]
+  },
+  {
+    "file": "p/8/1-4edge.dat",
+    "url": "https://library.ldraw.org/library/official/p/8/1-4edge.dat",
+    "sha256": "841b1c8c1e48553b010ba25fde8e9ef1ea959c1ac83c7c7b6dae7277fbee4a35",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2016-12-31 [PTadmin] Official Update 2016-01"
+    ]
+  },
+  {
+    "file": "p/box2-11.dat",
+    "url": "https://library.ldraw.org/library/official/p/box2-11.dat",
+    "sha256": "7f29fb8601b419207b5c855af8fad8abb55a967ec73f3d8be841d370c360b97c",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2005-12-28 [PTadmin] Official Update 2005-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/box2-5.dat",
+    "url": "https://library.ldraw.org/library/official/p/box2-5.dat",
+    "sha256": "8f297b754f87da1dbe19eec8704a5ce03a23b794ccd7cd015508e3758a206174",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-12-19 [PTadmin] Official Update 2003-03",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "p/box2-9p.dat",
+    "url": "https://library.ldraw.org/library/official/p/box2-9p.dat",
+    "sha256": "6c68301a34e42d105e716e5ae5edf02e3d58978db24619f0364887c339edd331",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-12-23 [PTadmin] Official Update 2013-02",
+      "0 !HISTORY 2024-01-04 [Holly-Wood] Complete re-write, original by Duq",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/box3u2p.dat",
+    "url": "https://library.ldraw.org/library/official/p/box3u2p.dat",
+    "sha256": "df73118b95f23d693c3b7d25c57c483db3bf61ae017d757848119955d28d59e0",
+    "attribution": [
+      "0 Author: Niels Karsdorp [nielsk]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-03-12 [PTadmin] Official Update 2003-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/box3u4a.dat",
+    "url": "https://library.ldraw.org/library/official/p/box3u4a.dat",
+    "sha256": "15463f41f9947dd75486dc7af3231b1037704f1b654c2555e3ba705817a2db75",
+    "attribution": [
+      "0 Author: Niels Karsdorp [nielsk]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-05-02 [PTadmin] Official Update 2009-01"
+    ]
+  },
+  {
+    "file": "p/box3u5p.dat",
+    "url": "https://library.ldraw.org/library/official/p/box3u5p.dat",
+    "sha256": "0f52d5c372a303f508113ace2c7cba6d52b46171052e76a88266679a74f17ea5",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02",
+      "0 !HISTORY 2024-01-02 [Holly-Wood] Complete re-write, original by WilliamH",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/box3u8p.dat",
+    "url": "https://library.ldraw.org/library/official/p/box3u8p.dat",
+    "sha256": "0f6187106f023d041dcfd2a24e9f5a2a0c37b5c41b0ff171267ae776a8f16760",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-12-13 [hafhead] Made BFC compliant",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/box4-1.dat",
+    "url": "https://library.ldraw.org/library/official/p/box4-1.dat",
+    "sha256": "2ed58df5da841827dfc5f9ac11c0bd7ffd8a455e46f166638e635f61a014b44d",
+    "attribution": [
+      "0 Author: Tore Eriksson [Tore_Eriksson]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-07-15 [PTadmin] Official Update 1998-07",
+      "0 !HISTORY 2002-04-05 [hafhead] Made BFC compliant",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/box4-3p.dat",
+    "url": "https://library.ldraw.org/library/official/p/box4-3p.dat",
+    "sha256": "a97d6ee9b7aab2f5aaebe52797f79e71f35dde7104a53117f7174190601b587e",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2010-07-05 [PTadmin] Official Update 2010-02",
+      "0 !HISTORY 2024-01-04 [Holly-Wood] Complete re-write, original by WilliamH",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/box4-4a.dat",
+    "url": "https://library.ldraw.org/library/official/p/box4-4a.dat",
+    "sha256": "58c69e00462c0a74c1bd6d75d757d826ae13e98bd3928b0e685209003bfbee54",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1998-07-15 [PTadmin] Official Update 1998-07",
+      "0 !HISTORY 2002-12-13 [hafhead] Made BFC compliant",
+      "0 !HISTORY 2003-03-12 [PTadmin] Official Update 2003-01",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01",
+      "0 !HISTORY 2024-01-03 [Holly-Wood] Complete re-write, original by Manfred Moolhuysen",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/box4.dat",
+    "url": "https://library.ldraw.org/library/official/p/box4.dat",
+    "sha256": "2cbfcf075ef5c87c6a5f543f837972a78d43274ac7771b92229b5fe5da797c1e",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-03 [sbliss] Modified for BFC compliance",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/box4o8a.dat",
+    "url": "https://library.ldraw.org/library/official/p/box4o8a.dat",
+    "sha256": "2144edea417bbc55c261e3731ea86d52ac50c7cb651b4879f55ec39966fd0f5b",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-04-22 [PTadmin] Official Update 2004-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/box5.dat",
+    "url": "https://library.ldraw.org/library/official/p/box5.dat",
+    "sha256": "ccb7b8a1d36692335b10ea6aa196849afcad4b15331683ed8112a10b50977318",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-03 [sbliss] Modified for BFC compliance",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/boxjcyl4.dat",
+    "url": "https://library.ldraw.org/library/official/p/boxjcyl4.dat",
+    "sha256": "ceb4a5fd46fbff7d2e396afbc308379b914b99556b30a136cfb578a3dc360877",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2011-12-29 [PTadmin] Official Update 2011-02",
+      "0 !HISTORY 2024-07-21 [Sirio] Removed wrong edge primitive, fixed Y-scale and precision of rects",
+      "0 !HISTORY 2024-07-29 [OrionP] Official Update 2024-06",
+      "0 !HISTORY 2024-08-03 [GeraldLasser] Using an unrotated edge prim for better results in Prim-Substition",
+      "0 !HISTORY 2024-08-26 [OrionP] Official Update 2024-07"
+    ]
+  },
+  {
+    "file": "p/daxle.dat",
+    "url": "https://library.ldraw.org/library/official/p/daxle.dat",
+    "sha256": "3084a2678b4847174e0cac7bdf683ec1fdcaa7091ab7f436b6555d24372e2c00",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/dconnhole.dat",
+    "url": "https://library.ldraw.org/library/official/p/dconnhole.dat",
+    "sha256": "34c99f778e1932d120e9caa4a09a51b411b3627de15b6f57ead95ab9b87006a2",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/dhingesocket.dat",
+    "url": "https://library.ldraw.org/library/official/p/dhingesocket.dat",
+    "sha256": "c75b50b2e1ec8696eb579617879f8b488f6c0c5b6b56e3d262a8cfc98e80a9f4",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2024-03-24 [OrionP] Official Update 2024-02"
+    ]
+  },
+  {
+    "file": "p/dnpeghole.dat",
+    "url": "https://library.ldraw.org/library/official/p/dnpeghole.dat",
+    "sha256": "6cff58c58325e6e956a8a9988012f83103b49c1505f890d3dfb9ea9c13fb0065",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2017-12-30 [PTadmin] Official Update 2017-01"
+    ]
+  },
+  {
+    "file": "p/dsnapridge.dat",
+    "url": "https://library.ldraw.org/library/official/p/dsnapridge.dat",
+    "sha256": "6d4cb6ec34a9c7440804e04e5e1ce1bba91cde4cf8c0e5adf5b4b7fb3ff374b4",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2022-05-07 [PTadmin] Official Update 2022-03"
+    ]
+  },
+  {
+    "file": "p/empty.dat",
+    "url": "https://library.ldraw.org/library/official/p/empty.dat",
+    "sha256": "192c9b9ee2e425cfbc9e9b12ff61ee0f05ae1cb0c12dc37d5590adb6abb65128",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2015-10-11 [PTadmin] Official Update 2015-01",
+      "0 !HISTORY 2025-08-13 [OrionP] Fix comments",
+      "0 !HISTORY 2025-08-31 [OrionP] Official Update 2025-08"
+    ]
+  },
+  {
+    "file": "p/rect.dat",
+    "url": "https://library.ldraw.org/library/official/p/rect.dat",
+    "sha256": "ffeb2dd3d9b83c38841f18f1f74800fbba9e90c5fb6badfff2a795f08a96cb71",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-05 [hafhead] Added BFC statement",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-01-17 [mikeheide] changed winding to CCW",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01"
+    ]
+  },
+  {
+    "file": "p/rect1.dat",
+    "url": "https://library.ldraw.org/library/official/p/rect1.dat",
+    "sha256": "48fdcd3181587b4bdc89d356a5aee21268688f3f2fcdd4d6f5c1a3d49b1a1ceb",
+    "attribution": [
+      "0 Author: Chris Dee [cwdee]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-12-19 [PTadmin] Official Update 2003-03",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-01-17 [mikeheide] changed winding to CCW",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01"
+    ]
+  },
+  {
+    "file": "p/rect2p.dat",
+    "url": "https://library.ldraw.org/library/official/p/rect2p.dat",
+    "sha256": "faac2b36241a9de0c0108471e59c45734df6c79813332d9cacf97f6391886acc",
+    "attribution": [
+      "0 Author: Donald Sutter [technog]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-01-17 [mikeheide] changed winding to CCW",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01"
+    ]
+  },
+  {
+    "file": "p/rect3.dat",
+    "url": "https://library.ldraw.org/library/official/p/rect3.dat",
+    "sha256": "07ac46908b6668d993b6de0fb001a34cd996542106b80ebc7de63317d8dde865",
+    "attribution": [
+      "0 Author: Mark Kennedy [mkennedy]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2003-08-01 [PTadmin] Official Update 2003-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-01-17 [mikeheide] Change winding to CCW",
+      "0 !HISTORY 2010-04-05 [PTadmin] Official Update 2010-01"
+    ]
+  },
+  {
+    "file": "p/stud.dat",
+    "url": "https://library.ldraw.org/library/official/p/stud.dat",
+    "sha256": "db037d518d7c08bcdc1f0e7497f4f98e97d99850531dd62d602965520f3bf8f4",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-16 [Philo] Changed to CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/stud4.dat",
+    "url": "https://library.ldraw.org/library/official/p/stud4.dat",
+    "sha256": "871cdcab26e7f5113488a24c453d6fabda75b275b06de592e0bfaad4292c12a3",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05",
+      "0 !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring",
+      "0 !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02"
+    ]
+  },
+  {
+    "file": "p/stud4a.dat",
+    "url": "https://library.ldraw.org/library/official/p/stud4a.dat",
+    "sha256": "29e414ab757f2a79073aa0d5d10c4c925da1fc239d20019d7615c06db612e2f6",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1999-07-05 [PTadmin] Official Update 1999-05",
+      "0 !HISTORY 2002-04-04 [sbliss] Modified for BFC compliance",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring",
+      "0 !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02"
+    ]
+  },
+  {
+    "file": "p/stud7.dat",
+    "url": "https://library.ldraw.org/library/official/p/stud7.dat",
+    "sha256": "250111864bb2492a8722544d1f09b5e45672ba3f8e93be769b77499e7ea3fb1a",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring",
+      "0 !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02",
+      "0 !HISTORY 2024-01-11 [Holly-Wood] Complete re-write, original by hafhead",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/stud8.dat",
+    "url": "https://library.ldraw.org/library/official/p/stud8.dat",
+    "sha256": "1a3202bf2d8dd8f58f59d09e220cb62f3411db762f88333a82503ab395f9d115",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-24 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2009-06-21 [cwdee] Update ring references to 4-4ring",
+      "0 !HISTORY 2009-09-03 [PTadmin] Official Update 2009-02",
+      "0 !HISTORY 2024-01-10 [Holly-Wood] Complete re-write, original by hafhead",
+      "0 !HISTORY 2024-01-29 [OrionP] Official Update 2024-01"
+    ]
+  },
+  {
+    "file": "p/stud8a.dat",
+    "url": "https://library.ldraw.org/library/official/p/stud8a.dat",
+    "sha256": "291cbfdb54441d6457a3e17155a8741cc8424a01f8e9b99a7c9a015085aacfb9",
+    "attribution": [
+      "0 Author: Michael Heidemann [mikeheide]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/stug-1x2.dat",
+    "url": "https://library.ldraw.org/library/official/p/stug-1x2.dat",
+    "sha256": "5842fa1baf6ea7f18fe4e355238cd733ff9bdbdc3d722be5cf8988f1c5fce414",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2011-07-25 [PTadmin] Official Update 2011-01"
+    ]
+  },
+  {
+    "file": "p/stug7-1x2.dat",
+    "url": "",
+    "sha256": "7c6e66e0625b1ea764d4e04f20f9113d23b9fcae3c17d586482b7180a8cefe23",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2022-01-14 [PTadmin] Official Update 2022-01"
+    ]
+  },
+  {
+    "file": "p/stug7-1x8.dat",
+    "url": "",
+    "sha256": "8031965598a877cf03b2be79d370d30f740c9a19349848cd20597a3cf35f4920",
+    "attribution": [
+      "0 Author: Tim Lampmann [L4mpi]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2022-07-18 [PTadmin] Official Update 2022-04"
+    ]
+  },
+  {
+    "file": "p/stug7-2x2.dat",
+    "url": "https://library.ldraw.org/library/official/p/stug7-2x2.dat",
+    "sha256": "409fe27186afedd30d6b65e83063fba99380218d4067a4b0359e4250911726ca",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/stug8-1x3.dat",
+    "url": "https://library.ldraw.org/library/official/p/stug8-1x3.dat",
+    "sha256": "627f78ac1cc6ec9ea012f87d3c632ec7ff6b7c2088bfa22ccf98da489c0a1b6f",
+    "attribution": [
+      "0 Author: Steffen [Steffen]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2013-07-21 [PTadmin] Official Update 2013-01"
+    ]
+  },
+  {
+    "file": "p/t02i1111.dat",
+    "url": "https://library.ldraw.org/library/official/p/t02i1111.dat",
+    "sha256": "827358bfc070521d4cfafac88fb7f74c41bd75e4ca712e13e28afc34c3533e40",
+    "attribution": [
+      "0 Author: Santeri Piippo [arezey]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2012-08-09 [PTadmin] Official Update 2012-02",
+      "0 !HISTORY 2013-09-27 [MMR1988] Recreated to fix condlines",
+      "0 !HISTORY 2013-12-23 [PTadmin] Official Update 2013-02"
+    ]
+  },
+  {
+    "file": "p/t04i1304.dat",
+    "url": "https://library.ldraw.org/library/official/p/t04i1304.dat",
+    "sha256": "e23d62de56e98c40060f11106d93688dd6a53d5d92507673c4d3690184769cfc",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-11-30 [PTadmin] Official Update 2002-05",
+      "0 !HISTORY 2007-10-09 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-22 [Philo] Rebuilt CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "p/t04i2500.dat",
+    "url": "https://library.ldraw.org/library/official/p/t04i2500.dat",
+    "sha256": "16a0e74be0e6e149ea99ffd6aff98b3406c19fc7727d0453b1fe1572cf4e40bb",
+    "attribution": [
+      "0 Author: Paul Easter [pneaster]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2004-04-22 [PTadmin] Official Update 2004-02",
+      "0 !HISTORY 2007-12-20 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2012-02-22 [Philo] Rebuilt CCW",
+      "0 !HISTORY 2012-03-30 [PTadmin] Official Update 2012-01"
+    ]
+  },
+  {
+    "file": "parts/14094.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/14094.dat",
+    "sha256": "f79b95ed33921863fc964d49a07d793e46105b30004f2baee6a2d4b64d4ff6af",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/15314.dat",
+    "url": "",
+    "sha256": "f9e25f6f72ee11599a848fc995e2e0ec3af1b969085d732f7a7098fae895ba03",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2023-08-25 [OrionP] Official Update 2023-04"
+    ]
+  },
+  {
+    "file": "parts/3437.dat",
+    "url": "https://library.ldraw.org/library/official/parts/3437.dat",
+    "sha256": "519f3e71ea22411db9cf499eb1a1ac6a017984c61fc59f556432753c9ee390b1",
+    "attribution": [
+      "0 Author: Tony Hafner [hafhead]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-04-25 [PTadmin] Official Update 2002-02",
+      "0 !HISTORY 2007-06-25 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2010-11-22 [anathema] Added !CATEGORY; BFC'd",
+      "0 !HISTORY 2010-12-31 [PTadmin] Official Update 2010-03",
+      "0 !HISTORY 2020-05-03 [RainbowDolphin] Subfiled for Pattern",
+      "0 !HISTORY 2020-12-29 [PTadmin] Official Update 2020-03"
+    ]
+  },
+  {
+    "file": "parts/65084.dat",
+    "url": "https://library.ldraw.org/library/official/parts/65084.dat",
+    "sha256": "62f85e5e3e18b0b5dac8fcecd7c63bc4edf7f53e4b1bb8f6d352279192abcfb1",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2026-10-26 [OrionP] Official Update 2026-10"
+    ]
+  },
+  {
+    "file": "parts/s/13355s03.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/13355s03.dat",
+    "sha256": "88819f2aff0122855ce0f0b2f99fd90d2066f13e8a8f08c6bb428313057b0a81",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2025-07-27 [OrionP] Official Update 2025-07"
+    ]
+  },
+  {
+    "file": "parts/s/14094s01.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s01.dat",
+    "sha256": "5c465979608472f09a066a812bfbbc1844c98bbe22d3d0681e7f24c1fa87aff0",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/14094s02.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s02.dat",
+    "sha256": "3f62aea335e29bc16e8bc860f235c7e2e34456ca2b932e4e8452d5931405ef40",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/14094s03.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s03.dat",
+    "sha256": "8d3364acbe982cfb287e62119c60aca3c5a4704d440665388306f3682bc94835",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/14094s04.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s04.dat",
+    "sha256": "531fd1397e84101d48a549ace0c75699243872e6e0d863189e60f3db90ca6fa5",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/14094s05.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s05.dat",
+    "sha256": "a8358945abdaecc65402c0738fea5a2a3b31763b62ca70741a5b4f86e63ffddf",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/14094s06.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s06.dat",
+    "sha256": "5df926370b5f9b8f157a2cafae64f30c7c00f45cc986a31ab73b33542f726366",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/14094s07.dat",
+    "url": "https://library.ldraw.org/library/unofficial/parts/s/14094s07.dat",
+    "sha256": "6bd2d7c32354bb7ef147605cbed834e212495d5c596d4b39af03d4df96f32014",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt"
+    ]
+  },
+  {
+    "file": "parts/s/15314s01.dat",
+    "url": "",
+    "sha256": "aab14f93473440e8482721300017d4e7dfe949b1a104629b9f3c3d605d8c4cda",
+    "attribution": [
+      "0 Author: Philippe Hurbain [Philo]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2020-12-12 {LEGO/Unity Microgame} Original part shape",
+      "0 !HISTORY 2021-02-15 [Philo] File preparation for LDraw Parts Tracker",
+      "0 !HISTORY 2023-08-25 [OrionP] Official Update 2023-04"
+    ]
+  },
+  {
+    "file": "parts/s/3001s01.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/3001s01.dat",
+    "sha256": "bee662925490666aa5956d301b7abc46df88b3cc35737326765441585c720047",
+    "attribution": [
+      "0 Author: James Jessiman",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2002-05-07 {unknown} BFC certification",
+      "0 !HISTORY 2002-05-07 [westrate] Unknown change",
+      "0 !HISTORY 2004-09-15 [PTadmin] Official Update 2004-03",
+      "0 !HISTORY 2007-08-29 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01"
+    ]
+  },
+  {
+    "file": "parts/s/3011s01.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/3011s01.dat",
+    "sha256": "69329138129ada6c7d9822586b3912916f232648fe38015959b93542acb4de27",
+    "attribution": [
+      "0 Author: Takeshi Takahashi [RainbowDolphin]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2020-06-28 [PTadmin] Official Update 2020-01"
+    ]
+  },
+  {
+    "file": "parts/s/3039s01.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/3039s01.dat",
+    "sha256": "febe4e468e966574084aac811cbf5321670d940736fe3ab748276fa585ac9962",
+    "attribution": [
+      "0 Author: Willy Tschager [Holly-Wood]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 1999-12-31 [PTadmin] Official Update 1999-06",
+      "0 !HISTORY 2003-07-02 [Steffen] BFCed; change in part name: \"w/o\" --> \"without\"",
+      "0 !HISTORY 2003-12-19 [PTadmin] Official Update 2003-03",
+      "0 !HISTORY 2007-08-30 [PTadmin] Header formatted for Contributor Agreement",
+      "0 !HISTORY 2008-07-01 [PTadmin] Official Update 2008-01",
+      "0 !HISTORY 2024-03-14 [Holly-Wood] Complete re-write, original by jvan",
+      "0 !HISTORY 2024-03-24 [OrionP] Official Update 2024-02"
+    ]
+  },
+  {
+    "file": "parts/s/3437s01.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/3437s01.dat",
+    "sha256": "e1ffb08efe385082b094cadf1f9d6530fd353d31872c818be025e983b66ae4a9",
+    "attribution": [
+      "0 Author: Takeshi Takahashi [RainbowDolphin]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2020-12-29 [PTadmin] Official Update 2020-03"
+    ]
+  },
+  {
+    "file": "parts/s/65084s01.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/65084s01.dat",
+    "sha256": "76b830a34ac790e212f66f3db5ddae4d2e899c4c6bfd409d7a647ac789590960",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2026-10-26 [OrionP] Official Update 2026-10"
+    ]
+  },
+  {
+    "file": "parts/s/65084s02.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/65084s02.dat",
+    "sha256": "b817dbd435819cb476b54b46bcec197fce1ff0046807a7db32096ddb974d2a1b",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2026-10-26 [OrionP] Official Update 2026-10"
+    ]
+  },
+  {
+    "file": "parts/s/65084s03.dat",
+    "url": "https://library.ldraw.org/library/official/parts/s/65084s03.dat",
+    "sha256": "e5ce54776072b554a9a86139299201ac0dff4e07ed6fd7d2c17d9268e6eb44e2",
+    "attribution": [
+      "0 Author: Peter Blomberg [WUIt]",
+      "0 !LICENSE Licensed under CC BY 4.0 : see CAreadme.txt",
+      "0 !HISTORY 2026-10-26 [OrionP] Official Update 2026-10"
+    ]
+  }
+]

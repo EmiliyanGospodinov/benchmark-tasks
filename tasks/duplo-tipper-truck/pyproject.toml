@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "duplo-tipper-truck"
+version = "0.1.0"
+description = "Assemble and unload a DUPLO tipper truck on the bimanual YAM station"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena"]
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_duplo_tipper = "duplo_tipper.embodiment:TipperEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+tipper_scripted = "duplo_tipper.policy:TipperScriptedPolicy"
+
+[tool.setuptools.packages.find]
+include = ["duplo_tipper*"]

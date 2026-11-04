@@ -1,0 +1,2 @@
+# Preserve vendored LDraw bytes and their recorded source hashes.
+assets/ldraw/** -text -whitespace
