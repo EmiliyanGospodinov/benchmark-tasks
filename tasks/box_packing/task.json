@@ -1,0 +1,20 @@
+{
+  "title": "Pack a parcel following a printed packing plan",
+  "category": "Impact on jobs",
+  "keywords": [
+    "packing",
+    "order picking",
+    "packing plan",
+    "pushing",
+    "tight tolerance"
+  ],
+  "instruction": "Pack the carton to match the two printed packing plans. The left sheet shows the bottom layer; the right sheet shows the top layer. Each plan has the same orientation as the carton. Leave boxes not shown on the plans outside the carton.",
+  "context": "As in e-commerce order picking, the robot tightly packs selected box-like products into a parcel to match a printed two-layer plan, using placement and pushing with 5 mm positional tolerances.",
+  "setup": "Coordinates: x forward from the line between the two arm bases, y to the left, from the midpoint between the bases. On the table: an open cardboard carton fixed to the table, centred at x 26 cm, y 0; inside 24 cm deep (x) by 18 cm wide (y) by 6.5 cm tall, 8 mm walls, 6 mm floor (outside 25.6 x 19.6 x 7.1 cm). Six loose rigid cardboard boxes stand on the table, sizes x by y by z: blue 16 x 6 x 3.5 cm, 0.20 kg, centred at (26, 27) cm; red 7 x 6 x 3.5 cm, 0.08 kg, at (42, 29) cm; yellow 9 x 6 x 2.5 cm, 0.06 kg, at (36, 19) cm; purple 7 x 6 x 5 cm, 0.12 kg, at (10, 17) cm; green 12 x 5.5 x 3.5 cm, 0.15 kg, at (26, -27) cm; orange 7 x 6 x 5 cm, 0.12 kg, at (42, -25) cm; all axis-aligned. The packing plan is printed on two paper sheets (15 x 12 cm) lying flat behind the carton, centred at x 47.8 cm and y +8 cm (left sheet: bottom layer) and y -8 cm (right sheet: top layer). Each sheet shows the carton's opening at half scale and in the carton's orientation (the sheet's far edge is the carton's far wall) as a black 3 mm outline, and each box of that layer as a filled rectangle in its colour. Bottom layer: blue in the far-left corner, green along the far wall to the right of blue, red along the left wall in front of blue. Top layer: yellow on blue, in the far-left corner. Blue has 3 mm clearance from the far and left walls; green has 3 mm clearance from the far wall and blue; red has 3 mm clearance from the left wall and blue. Yellow aligns with the far-left corner of blue and rests directly on it; remaining space stays empty. Purple and orange are not on the plan.",
+  "scoring": "0.25 for each of blue, red, green and yellow whose axis-aligned bounding box has every face (near, far, left, right, bottom, top) within 5 mm of where the plan puts it (the specified 3 mm clearances; yellow resting on blue). The score is 0 if the world-aligned bounding box of purple or orange intersects the carton's opening below its rim. Full score (1.0) needs all four packed boxes placed, with purple and orange outside the carton; the trial ends early once that holds with every packed box at rest (under 1 cm/s and 0.5 rad/s).",
+  "run_limit": "2,400 steps (2 minutes at 20 Hz)",
+  "reset_notes": "Nothing is consumed; put the six boxes back at their starting positions.",
+  "fidelity": "Approximate: all boxes and the carton are rigid cuboids (no cardboard deformation, flaps or tape); contact uses PhysX default friction; the printed plan is modelled as thin 1-2 mm boxes on the table.",
+  "scores": "Dream-1 run: 0.0; demo: 1.0",
+  "media": "M-6QT9GZ"
+}
