@@ -1,0 +1,20 @@
+{
+  "title": "Measure shaft end play and fit a split spacer",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "measurement",
+    "assembly",
+    "manual",
+    "tolerance"
+  ],
+  "instruction": "1. Lift the contact indicator. Hold both reference pads against the housing's rear datum and keep the spring probe aligned with the shaft end while moving the shaft gently to both axial stops. Hold steady at each stop; subtract the lower millimetre display reading from the higher. 2. Select a split spacer: travel 8–10 mm → blue 6 mm; 11–13 mm → yellow 9 mm; 16–18 mm → red 14 mm. Recheck other readings. Target final travel: 2–4 mm. 3. Move the shaft to its near stop, withdraw the indicator axially and return it to the table. Insert the spacer from above into the housing channel, opening down and tab up. Leave the fixed end stop installed; do not force an oversized spacer. 4. Repeat the referenced two-stop measurement and verify 2–4 mm travel. With the spacer retained, rotate the shaft at least 60°. 5. Return the indicator to the table, release and withdraw both hands. The spacer must stay seated and the assembly stable for 2 seconds.",
+  "context": "Use a measured clearance and a service procedure to select a spacer, fit it, and verify both clearance and rotation in a low-load training fixture.",
+  "setup": "Standard bimanual YAM station. Fixed 140×120 mm housing base with a horizontal 16 mm shaft, 56 mm thrust collar and fixed end stop; three upright split spacers (6 mm blue, 9 mm yellow, 14 mm red) on a parts mat; a handheld spring contact indicator with two reference pads and a remote millimetre readout. One fixed starting layout; dimensions, masses and poses are listed in README and the scene builders.",
+  "scoring": "0 initially. 0.25: valid referenced measurements at both initial axial stops. 0.5: after measuring, a spacer is seated giving 2–4 mm physical clearance. 0.75: a second referenced measurement verifies 2–4 mm, agreeing with physical clearance within 0.5 mm. 1.0: additionally rotate the retained shaft through at least 60 degrees, return the indicator, release and remain stable for 2 seconds. Invalid numeric states score 0; loss of the fitted spacer removes fitting/verification credit.",
+  "run_limit": "2,000 control steps (100 seconds at 20 Hz)",
+  "reset_notes": "Reset restores the shaft, loose spacers, indicator, robot joints, spring probe and score history; no consumables.",
+  "fidelity": "Original millimetre-clearance training fixture. Rigid compound geometry sets the fit; a native guide approximates the shaft bearing and a spring joint drives the contact probe. The remote display shows probe displacement. Contacts, masses and friction are authored, not calibrated hardware data; no deformation or wear is modelled.",
+  "scores": "Dream-1: 0.0 (seed 0, 2,000 steps); scripted demonstration: 1.0; repeat after reset: 1.0.",
+  "media": "M-BUGYJQ"
+}
