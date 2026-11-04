@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "yambition-hand-pump"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena"]
+[project.entry-points."inspect_robots.embodiments"]
+yam_hand_pump = "hand_pump.embodiment:PumpEmbodiment"
+[project.entry-points."inspect_robots.policies"]
+hand_pump_scripted = "hand_pump.policy:PumpScriptedPolicy"
+[tool.setuptools.packages.find]
+include = ["hand_pump*"]

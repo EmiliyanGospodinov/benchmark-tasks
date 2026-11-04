@@ -1,0 +1,19 @@
+{
+  "title": "Pump a test chamber to the pressure on its dial with a hand pump",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "hand pump",
+    "pressure",
+    "gauge reading",
+    "closed loop"
+  ],
+  "instruction": "1. Take hold of the white pump barrel with one gripper and the yellow handle with the other, and lift the pump a few centimetres off the grey mat together. 2. Keep the barrel still and pump: push the handle in toward the barrel, then pull it fully out again; repeat. 3. While pumping, watch the dial on the grey gauge housing (to the right of the pump, farther from the robots): its black needle turns clockwise as the pressure rises. The target is the red 60 kPa mark, which points straight away from the robots, in the middle of the green band (54 to 66 kPa). Stop pushing the handle immediately when the needle reaches the red mark, even partway through a stroke. Never exceed 80 kPa. 4. Put the pump back down on the grey mat with both of its feet on the mat, then open both grippers and move them away. 5. Check the dial again: the needle must still be within the green band.",
+  "context": "As when inflating a ball or pressure-testing a small vessel with a hand pump: one hand holds the pump while the other works the handle, and the operator watches the gauge to stop at the specified pressure.",
+  "setup": "Coordinates: x forward from the line between the two arm bases, y to the left, from the midpoint between the bases; heights above the table top. A grey rubber mat (43 x 14 cm, 2 mm) lies centred at (20, 0) cm. On it rests a hand pump along x: a white metal barrel with polymer end rings and feet (18 cm long, 4 cm diameter, 200 g, two blue end rings, two flat grey feet) centred at (12, 0) cm with its outlet end toward the robots, and an aluminium piston rod with a yellow polymer handle; the handle (1.8 x 4.8 x 3.2 cm, piston 35 g) is at (36, 0) cm, pulled fully out (8 cm stroke, 10 mm bore). The barrel axis is 2.8 cm above the table. A fixed grey polymer gauge housing (12.8 cm diameter, 4 cm tall) at (43, -16) cm carries a 12 cm dial on top: 0 to 120 kPa over 270 degrees clockwise, black ticks every 10 kPa (longer every 20), a solid green band from 54 to 66 kPa and a red mark at 60 kPa pointing toward +x. The black needle shows the pressure of the 30 mL test volume connected to the pump outlet by a hose (not shown); it starts at 0. Each foot is 3.0 x 3.6 x 0.9 cm, centred 6.5 cm to either side of the barrel centre along x. These are nominal material specifications for the original design; rigid contact uses friction 0.8 static and 0.6 dynamic.",
+  "scoring": "Uses the chamber pressure (what the dial shows), the grippers' measured openings and positions, and the barrel's pose. 0.25 once the chamber reaches 20 kPa; 0.5 once it has been within 54-66 kPa; 0.75 while it is within 54-66 kPa. 1.0 (success, trial ends) when it is within 54-66 kPa with the pump put down on the mat (all corners of both feet on the mat, barrel axis within 15 mm of its resting height, under 2 cm/s) and both grippers at least 80 % open with their TCPs at least 7 cm from the barrel and handle, continuously for 2 s. Exceeding 80 kPa at any time caps the score at 0.25. The untouched start scores 0.",
+  "run_limit": "1,800 steps (90 s at 20 Hz)",
+  "reset_notes": "Vent the chamber to 0 kPa, pull the handle fully out and lay the pump back on the mat.",
+  "fidelity": "Approximate: two rigid bodies on a prismatic guide (10 mm bore, 8 cm stroke, 0.8 mL dead volume). Pressure: quasi-static isothermal gas model driven by the measured piston travel, ideal check valves, 30 mL internal test volume; gas force equal and opposite on piston and barrel; seal drag 6 N s/m. No leak, heating or hose forces; hose not rendered. The needle is a display of the model pressure. Uncalibrated.",
+  "scores": "Dream-1 (dreamlabs/dream-1-beta): 0.0; scripted demo: 1.0."
+}

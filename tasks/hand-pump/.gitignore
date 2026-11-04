@@ -1,0 +1,4 @@
+assets/generated/
+runs/
+__pycache__/
+*.egg-info/
