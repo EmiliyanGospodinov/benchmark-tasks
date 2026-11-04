@@ -15,5 +15,6 @@
   "run_limit": "1,800 steps (90 s at 20 Hz)",
   "reset_notes": "Vent the chamber to 0 kPa, pull the handle fully out and lay the pump back on the mat.",
   "fidelity": "Approximate: two rigid bodies on a prismatic guide (10 mm bore, 8 cm stroke, 0.8 mL dead volume). Pressure: quasi-static isothermal gas model driven by the measured piston travel, ideal check valves, 30 mL internal test volume; gas force equal and opposite on piston and barrel; seal drag 6 N s/m. No leak, heating or hose forces; hose not rendered. The needle is a display of the model pressure. Uncalibrated.",
-  "scores": "Dream-1 (dreamlabs/dream-1-beta): 0.0; scripted demo: 1.0."
+  "scores": "Dream-1 (dreamlabs/dream-1-beta): 0.0; scripted demo: 1.0.",
+  "media": "M-2ZSJM5"
 }
