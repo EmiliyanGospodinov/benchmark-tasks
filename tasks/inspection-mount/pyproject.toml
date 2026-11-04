@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inspection-mount"
+version = "0.1.0"
+description = "Aim a loaded inspection arm and lock its joint with two YAM arms"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena"]
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_inspection_mount = "mount_aim.embodiment:MountEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+mount_scripted = "mount_aim.policy:MountScriptedPolicy"
+
+[tool.setuptools.packages.find]
+include = ["mount_aim*"]
