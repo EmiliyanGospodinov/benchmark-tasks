@@ -64,4 +64,3 @@ class Script:
         self.q = q
         self.worst_mm = max(self.worst_mm, pe * 1000)
         return np.r_[q, float(np.clip(finger / FINGER_OPEN, 0.0, 1.0))], label
-

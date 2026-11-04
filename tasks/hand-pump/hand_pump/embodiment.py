@@ -215,4 +215,3 @@ class PumpEmbodiment(YamArenaEmbodiment):
             self._trace.close()
             self._trace = None
         super().close()
-
