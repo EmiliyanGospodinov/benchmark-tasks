@@ -1,0 +1,143 @@
+{
+  "units": {
+    "position": "m",
+    "mass": "kg",
+    "quaternion": "xyzw"
+  },
+  "frame": "station: x forward, y left, z up; world table top z=0.7475 m",
+  "preassembled": [
+    "brick",
+    "cab",
+    "hinge"
+  ],
+  "parts": {
+    "chassis": {
+      "initial_pose": [
+        0.3,
+        0.0,
+        0.7757000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.0599,
+      "material": "plastic",
+      "geometry": "duplo_tipper/assets.py builder chassis"
+    },
+    "axle_front": {
+      "initial_pose": [
+        0.3,
+        -0.032,
+        0.7635000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.0075,
+      "material": "plastic with rubber tyres",
+      "geometry": "duplo_tipper/assets.py builder axle_front"
+    },
+    "axle_rear": {
+      "initial_pose": [
+        0.3,
+        0.032,
+        0.7635000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.0075,
+      "material": "plastic with rubber tyres",
+      "geometry": "duplo_tipper/assets.py builder axle_rear"
+    },
+    "brick": {
+      "initial_pose": [
+        0.3,
+        -0.04,
+        0.7853000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.0124,
+      "material": "plastic",
+      "geometry": "duplo_tipper/assets.py builder brick"
+    },
+    "cab": {
+      "initial_pose": [
+        0.3,
+        0.0,
+        0.7757000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.05925,
+      "material": "plastic",
+      "geometry": "duplo_tipper/assets.py builder cab"
+    },
+    "hinge": {
+      "initial_pose": [
+        0.3,
+        0.009,
+        0.8045000000000001,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.00832,
+      "material": "plastic",
+      "geometry": "duplo_tipper/assets.py builder hinge"
+    },
+    "bed": {
+      "initial_pose": [
+        0.2,
+        0.22,
+        0.748,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.02623,
+      "material": "plastic",
+      "geometry": "duplo_tipper/assets.py builder bed"
+    },
+    "payload": {
+      "initial_pose": [
+        0.12,
+        0.17,
+        0.758,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mass": 0.005,
+      "material": "wood",
+      "geometry": "20 mm cube"
+    }
+  },
+  "tray": {
+    "fixed": true,
+    "material": "plastic",
+    "centre_xy": [
+      0.3,
+      0.114
+    ],
+    "inner_xy": [
+      0.1,
+      0.09
+    ],
+    "floor_thickness": 0.004,
+    "wall_thickness": 0.004,
+    "wall_height_above_floor": 0.012
+  },
+  "geometry_source": "duplo_tipper/design.py and duplo_tipper/assets.py; all dimensions in metres"
+}
