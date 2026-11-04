@@ -17,8 +17,9 @@ unchanged, plus the holder mechanism and blades) and the scripted demonstration 
 
 ## Instruction
 
-`instruction.txt` (also the `instruction` field of `task.json`) is the text manual the policy
-receives: which blade to install (blue, white mark), how to release (turn the collar lever toward
+`instruction.txt` is the full text manual used in both recorded evaluations. The
+`task.json` instruction is a compact version of the same procedure for the board’s
+1,000-character field. The evaluated manual specifies: which blade to install (blue, white mark), how to release (turn the collar lever toward
 the arm bases about 35 degrees and keep it turned), the orientation (black edge down, notched tang
 first), the seat reference (shoulder against the holder nose), the lock (let the collar return)
 and the retention check (pull the blue end block until the carriage moves 6 mm for half a second,
@@ -105,7 +106,7 @@ generated into `assets/generated/`):
 cd tasks/blade-change
 inspect-robots run --embodiment yam_blade_change --policy blade_change_scripted \
   -E control_hz=20 -E cam_width=320 -E cam_height=176 \
-  --instruction "$(python -c 'import json; print(json.load(open("task.json"))["instruction"])')" --scorer task_score --max-steps 1200 --epochs 2 \
+  --instruction "$(python -c 'from pathlib import Path; print(Path("instruction.txt").read_text().strip())')" --scorer task_score --max-steps 1200 --epochs 2 \
   --store-frames --log-dir runs/blade-demo
 ```
 
@@ -144,7 +145,7 @@ configured through the Dream plugin:
 ```bash
 inspect-robots run --embodiment yam_blade_change --policy dream \
   -E object_jitter=0 -E control_hz=20 -E cam_width=320 -E cam_height=176 \
-  --instruction "$(python -c 'import json; print(json.load(open("task.json"))["instruction"])')" \
+  --instruction "$(python -c 'from pathlib import Path; print(Path("instruction.txt").read_text().strip())')" \
   --scorer task_score --max-steps 1200 --epochs 1 --seed 0 \
   --store-frames --log-dir runs/blade-dream
 ```
