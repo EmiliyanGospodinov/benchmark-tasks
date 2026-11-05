@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mechanical-puller"
+version = "0.1.0"
+description = "Extract a fitted collar with a prepared two-jaw puller and recover it with two YAM arms"
+requires-python = ">=3.12"
+dependencies = ["numpy", "scipy", "yam-arena"]
+license = {file = "LICENSE"}
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_mechanical_puller = "mechanical_puller.embodiment:PullerEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+mechanical_puller_scripted = "mechanical_puller.policy:PullerScriptedPolicy"
+
+[tool.setuptools.packages.find]
+include = ["mechanical_puller*"]

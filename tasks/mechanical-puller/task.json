@@ -1,0 +1,21 @@
+{
+  "title": "Extract a fitted collar with a prepared two-jaw screw puller",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "maintenance",
+    "puller",
+    "screw",
+    "disassembly",
+    "manual"
+  ],
+  "instruction": "1. The puller is already prepared: both hooks sit behind the orange collar on the fixed shaft. Grasp the grey end block on its side handle to keep the loose tool aligned. 2. With the other gripper, turn the orange screw knob clockwise, regrasping as needed, until the collar clears the shaft; keep supporting the tool. 3. Use both grippers to lift the loaded tool clear and place its crossbar upright on the two grey rest posts over the green tray. 4. Spread the two sliding jaws and let the collar settle fully inside the tray. Open both grippers and withdraw. The collar must stay in the tray and the tool on its rest for 2 seconds.",
+  "context": "Maintenance disassembly using a loose screw puller: one gripper counterholds the tool while the other turns its screw, then the removed collar is recovered and the tool parked. Both hooks are pre-engaged by the operator; fitting the puller is not part of this task.",
+  "setup": "Standard YAM station, table height 74.75 cm; x forward, y left. Original rigid metal training components: fixed flange 10 x 10 x 1 cm with 12 mm shaft (shoulder 3.5 cm, centre-cup rim 3.8 cm above table), centred x 28, y 4 cm. Orange metal collar: 13 mm bore, 22 mm diameter x 4 mm hub and 44 mm diameter x 10 mm rim, 30 g, hub bottom 1 cm above table. Loose puller body: 10 x 1.6 x 1.2 cm crossbar, 3 cm boss, black-coated 11 x 2 x 2.4 cm side handle with 2.4 x 3 x 2.4 cm end grip, 120 g; centre over shaft 7.75 cm above table. Die-cast orange knob: 36 mm diameter x 20 mm, 120 g, centre 4.8 cm above body. Metal guided ram: 8 mm tip pad, 5 mm point, 20 g, initially unextended. Two metal jaws: 6 x 14 x 56 mm arms, 16 x 14 x 3 mm hook lips, 20 g each; axes +/-25 mm, hooks pre-engaged under collar rim. Empty green rigid plastic tray: floor 12 x 10 x 0.4 cm, 11 x 9 cm interior, 0.5 cm walls rising 1.4 cm above table, centre x 28, y 18 cm. Two fixed metal rest posts, each 6 x 16 x 89 mm, span the tray at +/-45 mm in x and support the crossbar centre 9.5 cm above table. Nominal materials describe intended construction; contact properties and masses are authored, not calibrated.",
+  "scoring": "Initially 0. 0.25 after the collar clears the shaft with both jaws retained and at least two measured clockwise screw turns. 0.5 when that collar rests fully inside the tray. 1.0 when the intact tool is upright on its rest (4 mm horizontal and 3 mm vertical centre tolerance, 5 degrees orientation), the collar remains in the tray, both grippers are open and at least 8 cm from all loose part origins and the side-handle grip point, and all loose parts remain within 2 mm and 2 degrees for 2 seconds. Invalid states or a separated tool score 0. See scoring.py for exact geometric checks.",
+  "run_limit": "2,000 control steps (100 seconds at 20 Hz)",
+  "reset_notes": "Restore the pre-engaged puller, fitted collar, shaft, empty tray and robot ready poses; reset screw rotation, friction anchors and scoring history. No consumables.",
+  "fidelity": "Original rigid training fixture with a coarse 12 mm/turn screw. Native joints guide jaws and ram; measured knob rotation drives an internal compliant screw coupling with reaction torque. Axial fit and jaw friction use authored stick-slip parameters. The collar guide releases after shaft clearance. No deformation, thread contact or hardware calibration.",
+  "scores": "Dream-1: 0.0 (2,000 actions); scripted demonstration: 1.0; reset repeat: 1.0 (1,317 actions each).",
+  "media": "M-73B7KD"
+}
