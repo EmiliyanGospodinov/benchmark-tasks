@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yambition-modular-retrieval-tool"
+version = "0.1.0"
+description = "Assemble a two-piece hook tool, then recover a cartridge from a covered hood"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena"]
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_retrieval_tool = "retrieval_tool.embodiment:RetrievalEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+retrieval_tool_scripted = "retrieval_tool.policy:RetrievalScriptedPolicy"
+
+[tool.setuptools.packages.find]
+include = ["retrieval_tool*"]
