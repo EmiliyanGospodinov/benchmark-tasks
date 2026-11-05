@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ratchet-lowering"
+version = "0.1.0"
+description = "Lower a gravity-loaded ratchet trainer with a released intermediate hold, two YAM arms"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena"]
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_ratchet_lowering = "ratchet_lowering.embodiment:RatchetEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+ratchet_lowering_scripted = "ratchet_lowering.policy:RatchetScriptedPolicy"
+
+[tool.setuptools.packages.find]
+include = ["ratchet_lowering*"]

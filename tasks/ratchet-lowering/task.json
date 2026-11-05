@@ -1,0 +1,20 @@
+{
+  "title": "Lower a ratchet-held load in two stages with a released hold",
+  "category": "Impact on jobs",
+  "keywords": [
+    "bimanual",
+    "ratchet",
+    "pawl",
+    "load transfer",
+    "controlled lowering"
+  ],
+  "instruction": "Lower the blue weight of the ratchet trainer onto its wooden rest in two stages, stopping at a middle tooth in between. 1. Grip the orange crank handle and turn it slightly upward to take the load off the pawl. 2. With the other gripper, press the orange pawl tab down and keep it down. 3. Turn the crank slowly to lower the lever, never faster than 40 degrees per second, until the lever is just above horizontal. 4. Let the pawl tab back up, then ease the crank down until the pawl catches the next tooth, with the lever 1 to 10 degrees above horizontal (the second tooth below the start). 5. Open both grippers and move them away: the lever must stay there on the pawl for at least 2 seconds. 6. Take the crank again, take in slightly, press the pawl tab down and lower the lever slowly until the weight rests on the wooden rest. 7. Let the pawl tab go, release the crank and move both grippers away.",
+  "context": "Practice transferring a load between a hand crank and a ratchet pawl, controlling descent, and verifying a released intermediate hold before restarting. The original low-energy tabletop trainer makes the two simultaneous control roles visible.",
+  "setup": "Coordinates: x forward from the line between the arm bases, y left, from the midpoint between them; heights above the table top. A ratchet lowering trainer is clamped to the table on a dark 22 x 30 x 0.8 cm steel base plate (on a 30 x 38 cm mat) centred at (27, -1) cm. Two steel uprights carry a horizontal 12 mm shaft along y at x 24 cm, 10 cm high. On the shaft (one rigid rotor, 410 g): a 13 cm steel lever pointing forward with a blue 5 x 4 x 4 cm aluminium weight (200 g) at its end; at y -8 cm a 24-tooth sawtooth ratchet wheel (48 mm tip, 40 mm root radius, 12 mm thick); at y +9 cm a 7 cm crank whose orange handle sleeve (20 mm diameter, 40 mm long, centred at y +11.6 cm) spins freely on its pin. An orange spring-returned steel pawl (30 g) pivots at (29, -8) cm, 16.4 cm high, its nose in the wheel's teeth and its thumb tab (22 x 18 mm) at (33, -8) cm, 17.2 cm high; pressing the tab down lifts the nose out. A wooden rest under the weight stops the lever at 28 degrees below horizontal. Start: the lever 35.3 degrees above horizontal, held by the pawl; grippers open at their ready pose.",
+  "scoring": "Measured at 20 Hz. Permanent zero if sampled lever speed exceeds 40 degrees/s or state is nonfinite. 0.25 after lowering at least 10 degrees. 0.5 after a 2 s hold at 1–10 degrees above horizontal, speed below 1 degree/s, and pawl angle 2–5 degrees (engaged). Both grippers must be at least 80% open, their tool points at least 5 cm from the handle and tab centres, and every robot collision-shape world-axis bounding box at least 5 mm from every moving trainer collision-shape box. 0.75 after that hold and lowering below -10 degrees. 1.0 when, after the hold, the lever rests within 1.5 degrees of -28, still and released by the same conditions for 2 s. Landing without the intermediate hold scores at most 0.25. Success ends the trial.",
+  "run_limit": "1,600 steps (80 s at 20 Hz)",
+  "reset_notes": "Nothing is consumed: raise the lever back to the start tooth (35.3 degrees) and let the pawl engage.",
+  "fidelity": "Approximate: rigid primitive trainer on native PhysX revolute joints (shaft, pawl, crank sleeve); load held only by pawl-tooth contact on convex sawtooth teeth. The pawl spring is a declared joint torsion spring (0.004 N m/deg). No shaft damping, motor, snapping or software lock. Nominal masses/friction, no wear or deformation. 240 Hz physics, 20 Hz control and scoring.",
+  "scores": "Dream-1 run: 0.0; demo: 1.0",
+  "media": "M-GJHJP7"
+}
