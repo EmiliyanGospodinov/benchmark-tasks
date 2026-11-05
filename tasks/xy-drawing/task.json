@@ -1,0 +1,20 @@
+{
+  "title": "Trace an oblique path with two XY plotter knobs",
+  "category": "Impact on AI timelines",
+  "keywords": [
+    "bimanual",
+    "continuous coordination",
+    "indirect control",
+    "drawing",
+    "manual"
+  ],
+  "instruction": "The plotter starts at the blue dot. Viewed from above, turning the orange knob counterclockwise moves the stylus away from the robots; turning the teal knob counterclockwise moves it left. Follow the teal lane continuously from blue through orange to purple: first advance 80 mm and move left 80 mm, then advance 60 mm while moving right 40 mm. Keep the centre of the black line within 6 mm of the lane centre and avoid extra marks. At the purple endpoint, release the controls and withdraw both grippers at least 10 cm from the knobs; leave the drawing stable for 2 seconds.",
+  "context": "A mechanical teaching plotter maps two independent rotary controls to orthogonal stylus motion. Coordinating the controls produces an accurate oblique trace; endpoints alone do not establish success.",
+  "setup": "Fixed YAM station, table z=0.7475 m; x away from robot bases, y left. A 300x380x10 mm grey foot plate is centred at (0.30,0,0.753) m. The fixed white 240x200x12 mm canvas is centred at x=0.36,y=0, with its top 27 mm above the table. Orange X and teal Y rigid ridged knobs, each 40 mm across,18 mm tall and120 g, are centred at (0.23,+0.13,0.8275) and (0.23,-0.13,0.8275) m on fixed posts. A25 g transverse stage and15 g constrained stylus translate in X/Y; the stylus begins at (0.29,-0.07) m. Original teal12 mm reference lane joins this blue start to orange(0.37,0.01), then purple(0.43,-0.03). Marker diameter4 mm; waypoint diameter10 mm. Initial knob rotations0; ranges-5 to150 degrees, equivalent70 mm travel per radian. All geometry and mass definitions are generated from included source; fixed seed0,no jitter. A fixed240x360 mm case encloses the carriage: clear2 mm colliding lid at58–60 mm above the table, side walls and floor; the knobs remain outside/above its front edge. Transverse rail6x180x4 mm; stylus4 mm diameter by22 mm with8x8x4 mm carriage cap. Posts25x25x58 mm. Canvas/case are rigid plastic, rail/stylus metal, knobs nominal die-cast metal; geometry/mass and contact coefficients are authored. Construction specification: metal base, posts and rigid case; die-cast metal knobs; white coated drawing board; clear polycarbonate lid; aluminium 6x180x4 mm transverse stage; steel 4 mm diameter,22 mm long stylus with an8x8x4 mm carrier. Posts are25x25x58 mm; case walls2 mm thick and42 mm high, floor6 mm thick. Materials are intended reproduction materials; simulation uses the authored rigid-body masses and friction.",
+  "scoring": "Score the measured black trace, not the teal reference. Any trace centre more than6 mm from the two reference segments, or a start more than6 mm from blue, scores0. Otherwise0.5 for at least95% coverage of the first segment within6 mm;0.75 for at least95% of both segments plus trace endpoint within6 mm of purple. Full1.0 also requires both gripper TCPs at least100 mm from each knob centre and trace endpoint displacement envelope no more than1 mm over2 seconds. Coverage is sampled at at most1 mm spacing. Disconnected ink, empty/point-only traces score0; there is no hand-use or simultaneity condition.",
+  "run_limit": "6000 control steps (300 seconds at20 Hz).",
+  "reset_notes": "Reset stage and knob poses, clear all measured ink and scoring history, refresh camera frames, and restore robots to READY. Seed0 and no jitter.",
+  "fidelity": "Original enclosed teaching plotter. Measured knob angles set force-driven prismatic targets with reaction torque (declared rotary/linear transmission). An optically ideal clear lid (no refraction), with a physical collider, protects the constrained carriage. Measured stylus contact draws a4 mm ribbon with explicit breaks; ink/paper deformation omitted. Internal rails are visual. Demo uses calibrated waypoints; one-arm baselines read angles.",
+  "scores": "Dream-1: 0.0 (one trial,6000 actions/300 s); scripted demo:1.0; reset repeat:1.0 (403 actions/20.15 s each).",
+  "media": "M-Y9BYWE"
+}

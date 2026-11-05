@@ -1,0 +1,14 @@
+[build-system]
+requires=["setuptools>=64"]
+build-backend="setuptools.build_meta"
+[project]
+name="xy-drawing"
+version="0.1.0"
+requires-python=">=3.12"
+dependencies=["numpy","scipy","yam-arena"]
+[project.entry-points."inspect_robots.embodiments"]
+yam_xy_drawing="xy_drawing.embodiment:DrawingEmbodiment"
+[project.entry-points."inspect_robots.policies"]
+xy_drawing_scripted="xy_drawing.policy:DrawingPolicy"
+[tool.setuptools.packages.find]
+include=["xy_drawing*"]
