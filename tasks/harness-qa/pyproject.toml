@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yambition-harness-qa"
+version = "0.1.0"
+description = "Verify a two-conductor harness using simultaneous flying-probe contacts"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena"]
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_harness_qa = "harness_qa.embodiment:HarnessEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+harness_qa_scripted = "harness_qa.policy:HarnessPolicy"
+
+[tool.setuptools.packages.find]
+include = ["harness_qa*"]
