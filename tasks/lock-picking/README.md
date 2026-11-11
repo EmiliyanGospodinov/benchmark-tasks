@@ -115,4 +115,4 @@ python run.py run --embodiment yam_lock_picking --policy dream \
   --scorer task_score --max-steps 2400 --epochs 1 --seed 0 --store-frames --log-dir runs/lock-dream
 ```
 
-The Dream score is recorded in `task.json`. Uploading the model video, successful scripted demo and setup image must still fill the media ID before public submission.
+The Dream score and uploaded media ID are recorded in `task.json`. Media `M-9X88LP` contains the Dream-1 trial, full-score scripted demonstration and starting-layout screenshot.

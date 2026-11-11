@@ -16,5 +16,5 @@
   "reset_notes": "Nothing is consumed. Turn the plug back to 0 (the pins drop), straighten the wrench and lay the pick back on the table at its start pose.",
   "fidelity": "Enlarged (~3x), cut-away pin-tumbler trainer; square pins and exaggerated bore offsets make binding visible. Native rigid contacts and prismatic/revolute joints; declared pin, return and wrench springs. Wrench fitted to plug: no slip, wear or security pins. Open detents retain 90 degrees. The scripted demo uses simulator poses, pin heights and known binding order; evaluated policies receive camera images and joint state. Physics 240 Hz; scoring 20 Hz.",
   "scores": "Dream-1 run: 0.0; demo: 1.0",
-  "media": ""
+  "media": "M-9X88LP"
 }
