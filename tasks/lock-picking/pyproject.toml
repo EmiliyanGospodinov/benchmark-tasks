@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lock-picking"
+version = "0.1.0"
+description = "Pick an enlarged clear pin-tumbler training lock with a tension wrench and a hook pick, two YAM arms"
+requires-python = ">=3.12"
+dependencies = ["numpy", "yam-arena", "inspect-robots-yam"]
+
+[project.optional-dependencies]
+media = ["imageio", "imageio-ffmpeg"]
+test = ["pytest"]
+
+[project.entry-points."inspect_robots.embodiments"]
+yam_lock_picking = "lock_picking.embodiment:LockEmbodiment"
+
+[project.entry-points."inspect_robots.policies"]
+lock_picking_scripted = "lock_picking.policy:LockScriptedPolicy"
+
+[tool.setuptools.packages.find]
+include = ["lock_picking*"]
