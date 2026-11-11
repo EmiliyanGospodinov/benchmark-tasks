@@ -47,6 +47,8 @@ The crossing check applies when leaving the binding region. Drivers may subseque
 
 The frozen scripted run `final-001` scored 1.0 in both episodes, succeeding in 1,837 and 1,848 actions (91.85 and 92.4 seconds), including the reset repeat. Replaying its recorded 20 Hz measurements through the hardened scorer preserves every per-step score. The scene, controller and 166-character instruction are unchanged. Three recorded shortcut diagnostics also remain 0.0. These comparisons support the demonstrated cooperative procedure; wrench propping was not tested.
 
+The final Dream-1 evaluation (`dream-001`, `dreamlabs/dream-1-beta`, seed 0) scored **0.0** after the full 2,400 actions (120 seconds simulated), with no execution errors. It made 50 requests with 50 attempts, without retries. No pin was set; the plug reached at most 1.57 degrees. The evaluation used the same 166-character instruction and hardened scorer, with diagnostics disabled. Its source snapshot and hashes match the evaluated submission commit `4f6d883`; subsequent changes only record results in this README and `task.json`. A three-camera H.264 video was recorded.
+
 ## Running
 
 Install the pinned adapter (it installs Isaac Lab-Arena and Inspect Robots), then this package into the same
@@ -113,4 +115,4 @@ python run.py run --embodiment yam_lock_picking --policy dream \
   --scorer task_score --max-steps 2400 --epochs 1 --seed 0 --store-frames --log-dir runs/lock-dream
 ```
 
-Dream score and uploaded media ID remain pending in `task.json`. The local preparation is not yet a received submission.
+The Dream score is recorded in `task.json`. Uploading the model video, successful scripted demo and setup image must still fill the media ID before public submission.
