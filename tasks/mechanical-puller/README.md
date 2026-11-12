@@ -3,9 +3,10 @@
 The operator starts with both hooks engaged behind the fitted collar. The robot
 counterholds the loose tool, turns its screw, recovers the removed collar in a
 tray, and parks the tool. Autonomous puller placement is outside this task.
-The numbered text manual in `instruction.txt` specifies the operation, turning
-direction, recovery destination and final released check. Pass this exact text
-as the policy instruction; no image manual is implied.
+`instruction.txt` states only the goal and the scored constraints (screw
+extraction, collar in the tray, intact tool level on its rest in its starting
+orientation, both grippers open and at least 8 cm clear, everything still for two
+seconds). Pass this exact text as the policy instruction.
 
 ## Install and run
 
@@ -35,14 +36,13 @@ metadata versions differ from the guide branch labels; use the pinned bootstrap.
 For the model evaluation replace `--policy mechanical_puller_scripted -P stage=complete`
 with `--policy dream` and use one episode. Model evaluation incurs API costs.
 The embodiment keeps the organizer's station, YAM robot, three RGB cameras and
-14-D absolute joint-target action contract. The script reads privileged part
-poses for control; the model receives the ordinary observation contract.
+14-D absolute joint-target action contract. The scripted demonstration uses the
+same observation contract as the model (see "Demonstration controller").
 The task folder installs a custom embodiment plugin and generates original USD
 geometry locally. It is not an unmodified task-loader-only scene.
 
-Run limit: 100 simulated seconds. The verified script takes 65.85 simulated
-seconds (1,317 actions). Two episodes including startup took about 342 seconds
-wall time on the local GPU; rendering speed depends on hardware/load. Reset restores all loose bodies and native
+Run limit: 100 simulated seconds. The verified observation-only script takes 66.6
+simulated seconds (1,333 actions) per episode. Reset restores all loose bodies and native
 joints, screw angle, stick-slip anchors and score history. Seed 0; object jitter
 is disabled so the operator-prepared engagement is reproducible.
 
@@ -96,27 +96,55 @@ counterholding versus 12.7 mm without it over the same eight turning strokes.
 The unsupported tool rotated substantially. This supports counterholding in
 this procedure; it does not prove that all longer one-arm strategies fail.
 
+## Demonstration controller (observation-only)
+
+`mechanical_puller/policy.py` reads only: the 14-D measured joint state, the
+native 320x176 overhead image `top_cam`, elapsed time, its own memory, the
+calibrated arm bases with forward/inverse kinematics, and the published fixed
+layout (start pose of the prepared puller, screw lead, tray and rest position).
+It never reads simulator poses or joints, the embodiment or the scorer;
+`tests/test_obs_boundary.py` runs the whole plan with those inaccessible.
+
+- Tool pose: the published start pose until the right gripper closes on the end
+  grip; afterwards right-hand FK of the measured joints composed with the grasp
+  transform captured at that moment. Arms are commanded by position only.
+- Extraction stop: the left wrist joint's measured rotation while it grips the
+  knob gives the turns made; times the 12 mm lead this is the screw advance. The
+  holder rises with it, and turning stops once it exceeds the 27 mm clearance by
+  4 mm (eight strokes in the verified run; eleven strokes is a safety cap). The
+  overhead camera cannot see this rise (about 5.5 mm per pixel, both hands over
+  the shaft), so this stop is proprioceptive: it assumes the knob turns with the
+  wrist. It is close to a stroke count when the knob does not slip.
+- Camera gate: after the carry, `shaft_view.py` must read the shaft flange as
+  visible and free of orange for five consecutive frames before the tool is
+  lowered and the jaws are spread. Unreadable or occluded frames never count; if
+  this is not confirmed within 4 s, the arms hold and nothing is released. It was
+  checked on the recorded native frames of four earlier episodes with no false
+  "gone" reading.
+- Parking relies on the grasp transform and the fixed rest position. Its aim
+  includes a +2 mm x offset; the zero y offset was set from the settling
+  measured in the 0.5-scoring development run. Final error in the verified run:
+  0.6 / -2.6 mm and -0.6 / -2.8 mm (x / y) against the 4 mm tolerance. There is no
+  visual feedback on the parked position.
+- The scripted demonstration is deterministic and was verified only at seed 0.
+
 ## Evidence
 
-Frozen runtime **ec667d6**, run `final-003`: full score **1.0 / 1.0**, including
-reset between episodes, each after **1,317 actions / 65.85 seconds**. All 14 scorer
-tests pass. Replaying all 2,634 saved state samples reproduces the runtime scores
-exactly; runtime and packaged scorer SHA-256 are
-`6d8c0a934e86e3c1936cb064289b5bff4526e2c1b4b648b800b775de5244c0b9`.
+Observation-only controller, run `rev-004`: task score **1.0 / 1.0** (first
+episode and reset repeat), each **1,333 actions / 66.6 s**. 18 CPU tests pass.
+Development run `rev-003` scored 0.5 / 0.5; the tool parked 5.1-5.3 mm off in y
+before the parking aim was corrected. Videos: left wrist | right wrist | top,
+native 960x176, 20 fps, one per episode; handed off separately.
+`render_video.py RUN_DIRECTORY [EPISODE]` renders saved raw frames.
 
-Both three-camera videos were inspected at extraction, two-hand transport,
-physical jaw spreading and released parking. Run media: `demo.mp4`, `demo-e1.mp4`
-and `setup-top.png`; these are handed off separately, not embedded in source.
-`render_video.py RUN_DIRECTORY [EPISODE]` regenerates them from saved raw frames.
-The final Dream result and uploaded media identifier are recorded in task.json.
+The earlier privileged script (run `final-003`, 1.0 / 1.0) is no longer part
+of the package.
 
 The prepared-scene counterhold comparison predates the tray-spanning cradle;
 it is evidence about that diagnostic setup, not an exhaustive one-arm exclusion
-for the final scene. The complete script uses both arms for extraction and
-transport. A side-handle-only transport attempt dropped the tool; the successful
-script supports the knob with the other gripper while carrying.
+for the final scene. The script uses both arms for extraction and transport.
 
-One Dream-1 evaluation of the same scene and instruction completed all 2,000 actions (100 simulated seconds) with score 0.0 and no runtime errors. It did not extract the collar. The full-score scripted demonstration accompanies this result.
+Dream-1 with the revised instruction scored 0.0 (2,000 steps, seed 0).
 
 ## Attribution
 
