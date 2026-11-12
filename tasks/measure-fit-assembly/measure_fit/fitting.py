@@ -2,7 +2,7 @@
 import numpy as np
 from . import design as d
 
-SPACERS={'shim_6':.006,'shim_9':.009,'shim_14':.014}
+SPACERS={'shim_blue':.0088,'shim_yellow':.0090,'shim_red':.0092}
 STARTS={name:np.r_[x,.18,d.TOP+.024,0.,0.,0.,1.]
         for name,x in zip(SPACERS,(.14,.26,.38))}
 FINAL_Z=-.012
@@ -21,7 +21,7 @@ def add_guides(housing):
 
 def build_spacer(name,thickness):
     from .builder import _Body,LABEL,BLUE,RED
-    color={"shim_6":BLUE,"shim_9":LABEL,"shim_14":RED}[name]
+    color={"shim_blue":BLUE,"shim_yellow":LABEL,"shim_red":RED}[name]
     b=_Body(name,.035,(.3,.2))
     for y in (-.020,.020):
         b.box((0,y,0),(thickness,.020,.040),0,color)

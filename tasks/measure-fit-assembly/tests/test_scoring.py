@@ -19,8 +19,26 @@ class ScoringTests(unittest.TestCase):
   for x in (0.,12.):
    for _ in range(8): self.tick(s,shaft_mm=x,probe_mm=x-6)
   self.assertEqual(s.score,.25)
-  self.tick(s,installed=True,clearance_mm=6.)
-  self.assertEqual(s.score,.25)
+  for wrong in (3.2,2.8,6.):
+   self.tick(s,installed=True,clearance_mm=wrong)
+   self.assertEqual(s.score,.25)
+ def test_loose_initial_reading_is_not_accepted(self):
+  s=FitScore()
+  for x,p in ((0.,-6.),(12.,6.2)):
+   for _ in range(8): self.tick(s,shaft_mm=x,probe_mm=p)
+  self.assertEqual(s.score,0)
+ def test_unsteady_reading_is_not_accepted(self):
+  s=FitScore()
+  for x in (0.,12.):
+   for i in range(8): self.tick(s,shaft_mm=x,probe_mm=x-6+.03*(i%2))
+  self.assertEqual(s.score,0)
+ def test_remeasurement_must_agree_within_005(self):
+  s=FitScore()
+  for x in (0.,12.):
+   for _ in range(8): self.tick(s,shaft_mm=x,probe_mm=x-6)
+  for x,p in ((0.,-6.),(3.,-2.92)):
+   for _ in range(8): self.tick(s,shaft_mm=x,probe_mm=p,installed=True,clearance_mm=3.)
+  self.assertEqual(s.score,.5)
  def test_nan_does_not_preserve_success(self):
   s=FitScore();s.success=True
   self.assertEqual(self.tick(s,shaft_mm=float('nan')),0)

@@ -5,17 +5,24 @@ install it, then verify clearance and shaft rotation. The right arm supports the
 indicator against the housing datum while the left moves the shaft between stops.
 The fitting step uses an open-topped channel; the fixed end stop stays installed.
 
-**Verified scripted demonstration:** two complete episodes, including a reset,
-each score **1.0** in 87.7 simulated seconds from code commit `6842a9c`.
-Initial gauging, physical spacer fitting, final clearance, rotation and released
-stability all pass. Dream-1 scored **0.0** in one seed-0 trial using the full
-2,000-step allowance (100 simulated seconds, 203.96 seconds wall time), with
-no runtime errors. It attempted manipulation but did not complete referenced
-gauging. Both policies received the same full text manual.
+**Tolerances.** The indicator display resolves 0.01 mm. The three selective
+split spacers are 8.80, 9.00 and 9.20 mm (0.2 mm steps) and the accepted final
+end play is 2.90–3.10 mm, so exactly one spacer fits the measured 12.00 mm travel
+and each neighbour misses the window by 0.10 mm. Real end-play shimming works in
+hundredths to tenths of a millimetre; the steps here are coarser than typical
+real shims (often 0.05–0.1 mm) because the robot-held indicator repeats to about
+0.04 mm in simulation, and the 3 mm nominal end play is far larger than a real
+small gearbox's so the robot can insert the spacer without a lead-in. The
+initial travel is fixed, so the 9.00 mm spacer is the correct one after every reset.
+
+**Scripted demonstration (revised tolerances):** two complete episodes,
+including a reset, each score **1.0** in 87.7 simulated seconds. The held indicator
+measured 11.98 mm initial travel in both episodes (true travel 12.00 mm), selecting
+the 9.00 mm spacer; remeasured end play was 2.99 mm against 3.00 mm physical.
+Dream-1 on the revised task scored 0.0 (seed 0, 2,000 steps).
 
 The board instruction is a compact summary. `instruction.txt` contains the full
-numbered manual used for both the recorded scripted episodes and the final Dream
-evaluation; the run commands below pass that exact file.
+numbered manual; the run commands below pass that exact file.
 
 ## Install and run
 
@@ -46,7 +53,7 @@ during insertion; reference-pad and yaw feedback aligns the handheld indicator a
 It issues ordinary robot joint targets; it does not attach
 objects to grippers or move objects directly. A model receives the manual through
 the text instruction and reads the physical probe's remote display through the
-standard cameras. The display's absolute scale has a 20 mm offset: subtracting
+standard cameras. The display (00.00–40.00, 0.01 mm steps) has a 20 mm offset: subtracting
 the two stop readings removes that offset.
 
 For a reset repeat, add `--epochs 2` to the command above. Export each episode's
@@ -67,10 +74,7 @@ inspect-robots run --embodiment yam_measure_fit --policy dream \
   --max-steps 2000 --epochs 1 --seed 0 --store-frames --log-dir runs/dream
 ```
 
-The local development helper `run-station.sh NAME full 2` additionally snapshots
-source, commit/diff, instruction and telemetry. It contains a workstation-specific
-environment path; the command above is the portable entry point. Shared GPU users
-must follow their workspace's reservation/priority launcher.
+Shared GPU users must follow their workspace's reservation/priority launcher.
 
 ## Physical layout
 
@@ -87,7 +91,7 @@ The instrument must be lifted clear of that support for gauging. Exact geometry 
 | Fixed end stop | Metal annular stop, 64 mm OD / 20 mm bore, 8 mm thick, supported on a post | 0.05 kg, fixed | housing origin; inner face at local x=20 mm |
 | Indicator body | Rigid 35×35 mm handle, open probe bore, two reference bridge pads; approximately 150×60×39 mm envelope | 0.18 kg | (0.06665, 0, 0.77394) |
 | Spring probe | 6 mm stem, 12 mm contact tip; native ±20 mm prismatic travel, 20 N/m spring | 0.012 kg | (0.13488, 0, 0.78475) |
-| Blue / yellow / red spacers | Polymer training shims, 6 / 9 / 14 mm axial thickness; 60 mm width; 95.5 mm height including 26×28×25 mm grasp tabs | 0.035 kg each | x=0.14 / 0.26 / 0.38, y=0.18, z=0.7715 |
+| Blue / yellow / red spacers | Polymer selective split spacers, 8.80 / 9.00 / 9.20 mm axial thickness; 60 mm width; 95.5 mm height including 26×28×25 mm grasp tabs | 0.035 kg each | x=0.14 / 0.26 / 0.38, y=0.18, z=0.7715 |
 | Parts mat | 320×120×4 mm rigid mat | supplied Box | (0.26, 0.18, 0.7495) |
 | Remote readout | 85×150×16 mm fixed housing with non-colliding display segments | 0.2 kg, fixed | (0.41, -0.25, 0.7555) |
 
@@ -100,9 +104,10 @@ models, not calibrated industrial hardware.
 ## Scoring and checks
 
 Initial score is zero. Referenced gauging requires probe alignment/contact geometry,
-both reference pads within 0.5 mm of the housing datum, and stable readings at both
-physical stops. The scorer checks initial measurement, installed geometry, final
-2–4 mm clearance and its remeasurement, actual angular sweep of at least 60°, and
+both reference pads within 0.5 mm of the housing datum, the shaft within 0.05 mm of
+each physical stop, and readings steady within 0.02 mm for 0.25 s. The initial travel
+must be within 0.10 mm of 12.00 mm. The scorer checks installed geometry, final
+2.90–3.10 mm clearance and its remeasurement (agreeing within 0.05 mm), actual angular sweep of at least 60°, and
 two seconds of released stability. Releasing means open grippers at least 6 cm from
 the relevant grasp regions; the indicator must be returned to table height.
 
@@ -114,10 +119,12 @@ CPU tests cover false measurements, invalid values, wrong clearance, visual read
 encoding, and the need for post-fitting verification, rotation and release. A test
 pass is not evidence that robot manipulation succeeds. See run evidence for that.
 
-In a separate physically loaded geometry check, the 6 mm spacer left 5.994 mm
-of shaft travel, the 9 mm spacer left 2.995 mm, and the 14 mm spacer could not
-seat (it remained about 34 mm above the installed position). These are mechanism
-checks; the two full robot demonstrations use the fixed layout described above.
+Selection margin: in the recorded held-indicator episodes, steady readings at the
+stops matched true shaft travel within about 0.04 mm, against the 0.10 mm margin to
+each selection boundary. The adjacent spacers would leave 3.20 or 2.80 mm, outside
+the accepted window. The earlier loaded-geometry check (6/9/14 mm spacers) and the
+one-arm comparison below were made on the previous, looser version and were not
+repeated.
 Omitting the instrument-holding arm from the same measuring procedure produced
 no valid referenced measurement and scored 0.0 in a separate 27.5-second trial.
 This comparison tests that procedure, not every possible one-arm strategy.

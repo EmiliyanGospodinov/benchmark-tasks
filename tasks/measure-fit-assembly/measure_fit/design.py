@@ -5,9 +5,11 @@ import math
 @dataclass(frozen=True)
 class Fit:
     initial_play: float = .012
-    target_min: float = .002
-    target_max: float = .004
-    spacer_thicknesses: tuple = (.006, .009, .014)
+    # Selective spacers in 0.2 mm steps; accepted end play is a 0.2 mm window,
+    # so exactly one step lands inside it and both neighbours fall 0.1 mm outside.
+    target_min: float = .0029
+    target_max: float = .0031
+    spacer_thicknesses: tuple = (.0088, .0090, .0092)
 
     def choose(self, measured_play):
         if not math.isfinite(measured_play):
@@ -27,7 +29,7 @@ SHAFT_RADIUS = .008
 STOP_RADIUS = .028
 STOP_THICKNESS = .008
 # Sliding collar occupies x in [0, .008] at the near stop.
-# Rear stop inner face is at .020; a .009 spacer reduces travel to .003.
+# Rear stop inner face is at .020; a 9.0 mm spacer reduces travel to 3.0 mm.
 REAR_FACE = STOP_THICKNESS + SPEC.initial_play
 
 # Standard station measurement prototype (metres).

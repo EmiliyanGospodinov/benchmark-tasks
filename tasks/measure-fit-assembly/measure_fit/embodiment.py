@@ -16,7 +16,7 @@ from . import design as d
 
 
 TASK_FILE = Path(__file__).resolve().parents[1] / "task.py"
-PARTS = ("housing", "shaft", "retainer", "gauge", "probe", "shim_6", "shim_9", "shim_14", "readout")
+PARTS = ("housing", "shaft", "retainer", "gauge", "probe", "shim_blue", "shim_yellow", "shim_red", "readout")
 FREE = ("shaft", "gauge", "probe")
 ACTIVE = None  # read only by the declared privileged demonstration policy
 

@@ -12,7 +12,7 @@ _DIAGNOSTIC_CHOICE=None
 
 def selected(sim):
     if _DIAGNOSTIC_CHOICE is not None:return _DIAGNOSTIC_CHOICE
-    if sim is None:return 'shim_9'  # CPU reach preflight only
+    if sim is None:return 'shim_yellow'  # CPU reach preflight only
     measured=sim.scorer.initial_travel_mm
     if measured is None:raise RuntimeError('No valid initial measurement; refusing to select a spacer')
     thickness=d.SPEC.choose(measured/1000)
@@ -108,6 +108,6 @@ def extend(measurement_plans):
 
 def fit_probe():
     global _DIAGNOSTIC_CHOICE
-    _DIAGNOSTIC_CHOICE='shim_9'
+    _DIAGNOSTIC_CHOICE='shim_yellow'
     p=installation()+[Seg(3.,ready('left'),FINGER_OPEN,'return ready'),Seg(2.,None,FINGER_OPEN,'observe retention')]
     return {'left':p,'right':[Seg(sum(s.duration for s in p),ready('right'),FINGER_OPEN,'idle')]}
