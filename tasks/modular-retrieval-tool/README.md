@@ -2,13 +2,23 @@
 
 Build a working reach-extension tool from a loose shaft and hook head, then use it to recover a cartridge from a covered service channel. A spring-return release control must be held open while the head is inserted and quarter-turned; its returning gate prevents reverse rotation, while bayonet lugs retain the head axially. The completed tool must actually hook and pull the cartridge, then be returned intact after placing the cartridge in its tray.
 
-**Scripted demonstration: 1.0 in both episodes, including a reset. Dream-1: 0.0 in one 1,500-action evaluation.**
+**Scripted demonstration with the current instruction: see Simulation and evidence. Dream-1 with the current instruction: 0.0 (1,500 steps, seed 0).**
 
-## Mechanism and manual
+## Mechanism
 
 The blue squeeze control is guided laterally on the loose shaft. One gripper pinches it against the fixed handle, opening the gate while supporting the tool. The other gripper seats and turns the head. Releasing the control returns the gate through a window in the head's bell. The gripper then takes the fixed rear handle for tool use, leaving the release shut. Neither shaft nor head is fixed to the table; no joint attaches them.
 
-The single-line text manual in `instruction.txt` and `task.json` explains the release, keyed alignment, quarter turn, return and regrasp, tooth engagement, retrieval and final checks. The demonstration reads this same instruction file; its actions are privileged, as described below. This is text-manual delivery, not a visual-manual evaluation.
+## Instruction
+
+`instruction.txt` and `task.json` give the goal and the scored end state only:
+
+> Lock the orange hook head onto the grey shaft and use the assembled tool to hook the blue cartridge out of the hood. Set the cartridge upright in the green tray, lay the tool, still locked, flat where the shaft started, then let go of everything and move both hands clear.
+
+How to work the release, align the slots, turn the head or grasp the parts is left to the robot. Each clause maps to a scored condition below. The scripted demonstration is run with this text but does not use it; its actions are privileged, as described below.
+
+## Who does this
+
+General maintenance and repair workers (O*NET 49-9071.00) and industrial machinery mechanics (49-9041.00) recover parts from inside guards, hoods and recesses that a hand cannot safely enter: they fit a hook tip to a handle with a twist-lock, check it is locked, draw the part out, put it where it belongs and stow the tool. A tip that is not locked can twist or come off inside the guard, leaving two things to recover instead of one.
 
 Manually held-open coupling sleeves provide an engineering precedent ([Parker Sleevmatic](https://www.parker.com/content/dam/Parker-com/Literature/Literature-Files/pneumatic/Literature/Telepneumatic/MRO/MRO_Quick_Coupling.pdf)). This task uses an original squeeze-control linkage, not a replica of that product. The manufacturer reference does not validate these dimensions, loads or robot grasps.
 
@@ -78,4 +88,4 @@ To evaluate Dream-1 with a configured account, use the same command with
 
 Native rigid-body contacts retain the bayonet and engage the hook. A native shaft-fixed prismatic guide supports the rigid control linkage, with a 100 N/m spring, 3 mm preload, 2 N s/m damping and 20 mm travel. Shaft/linkage collision is disabled for the unmodelled guide rails; head/gate and robot contacts remain active. No shaft/head weld, pose snapping, hand-count condition or model-dependent force is used. Dimensions, masses, inertia and friction are nominal prototype values, not calibrated hardware measurements. Head, shaft and linkage use 128 position/8 velocity solver iterations; other parts use 16/4.
 
-A support diagnostic retracts the control 20 mm and lifts the loose shaft about 21 mm with the same gripper, then demonstrates spring return. Held assembly seats and turns the head, and the gate returns after release. With the same mechanism source, untouched-release insertion remains 9.6 mm too high and 17.4 mm off-axis (0.0), and opening then releasing the control before insertion also fails (9.6 mm high, 18.5 mm off-axis, 0.0). These comparisons support the cooperative procedure; they do not prove every possible one-arm strategy impossible. The full demonstration and reset repeat each score 1.0 at 48.7 simulated seconds (975 rendered frames each), with 182.3 mm and 182.3 mm of measured hooked cartridge travel. Both finish with the retained tool stowed, cartridge fully in its tray, and both grippers open and clear for two seconds. Runtime source: `0695a34fbbbc989fde650b46a2fa4d9bc05066ce`; later documentation changes do not alter that source. One Dream-1 evaluation using the same mechanism and text manual completed 1,500 actions (75 simulated seconds) with score 0.0 and no runtime error; it did not assemble the tool or retrieve the cartridge. The full-score scripted demonstration accompanies that result.
+A support diagnostic retracts the control 20 mm and lifts the loose shaft about 21 mm with the same gripper, then demonstrates spring return. Held assembly seats and turns the head, and the gate returns after release. With the same mechanism source, untouched-release insertion remains 9.6 mm too high and 17.4 mm off-axis (0.0), and opening then releasing the control before insertion also fails (9.6 mm high, 18.5 mm off-axis, 0.0). These comparisons support the cooperative procedure; they do not prove every possible one-arm strategy impossible. With the current goal-based instruction, the full demonstration and reset repeat each score 1.0 at 48.7 simulated seconds (974 actions, 975 rendered frames each), with 182.3 mm and 182.3 mm of measured hooked cartridge travel. Both finish with the locked tool stowed, cartridge fully in its tray, and both grippers open and clear for two seconds. Mechanism, scorer and controller source are unchanged from the earlier submission; only the instruction and descriptive text changed. A model evaluation with the current instruction is pending. An earlier Dream-1 evaluation used a superseded step-by-step instruction and scored 0.0 over 1,500 actions.
