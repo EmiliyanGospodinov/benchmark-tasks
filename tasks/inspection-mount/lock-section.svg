@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 570" width="1000" height="570" font-family="sans-serif">
+<title>Indexed lock, section and knob travel</title>
+<defs><pattern id="h" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#9aa3ad" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" fill="#1f2933"/></marker></defs>
+<style>
+.post{fill:#e3e7eb;stroke:#1f2933;stroke-width:1.2}
+.cut{fill:#ffffff;stroke:#1f2933;stroke-width:1}
+.steel{fill:#cfd6dd;stroke:#1f2933;stroke-width:1.2}
+.ring{fill:#f2c48d;stroke:#1f2933;stroke-width:1.2}
+.knob{fill:#f59e42;stroke:#1f2933;stroke-width:1.2}
+.thin{stroke:#1f2933;stroke-width:0.8;fill:none}
+.axis{stroke:#5b6b7a;stroke-width:0.8;stroke-dasharray:8 3 2 3;fill:none}
+.dim{stroke:#2563a8;stroke-width:0.8;fill:none;marker-start:url(#ar);marker-end:url(#ar)}
+.spring{stroke:#1f2933;stroke-width:1;fill:none}
+.lab{font-size:11px;fill:#1f2933}
+.dimt{font-size:10px;fill:#2563a8}
+.ttl{font-size:14px;font-weight:bold;fill:#1f2933}
+.small{font-size:10px;fill:#4a5561}
+.curve{stroke:#c2410c;stroke-width:2;fill:none}
+.grid{stroke:#d5dbe1;stroke-width:0.8}
+</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="20.0" y="24.0" class="ttl" text-anchor="start">Indexed lock: section in the vertical plane through the hinge axis (unlocked, knob at 0 deg)</text>
+<text x="20.0" y="40.0" class="small" text-anchor="start">Proposed original design consistent with the simulated thresholds; not built or tested. Dimensions in mm; x along the hinge axis.</text>
+<rect x="317.5" y="240.0" width="135.0" height="247.5" class="post"/>
+<rect x="349.0" y="294.0" width="94.5" height="63.0" class="cut"/>
+<rect x="371.5" y="240.0" width="27.0" height="54.0" class="cut"/>
+<rect x="317.5" y="264.8" width="54.0" height="13.5" class="cut"/>
+<path d="M313.5,487.5 l8,-4 l-4,8 l8,-4" class="thin"/>
+<rect x="119.5" y="294.0" width="117.0" height="22.5" class="steel"/>
+<rect x="281.5" y="294.0" width="67.5" height="22.5" class="steel"/>
+<rect x="119.5" y="343.5" width="117.0" height="22.5" class="steel"/>
+<rect x="281.5" y="343.5" width="67.5" height="22.5" class="steel"/>
+<rect x="106.0" y="280.5" width="13.5" height="99.0" class="steel"/>
+<rect x="128.5" y="258.0" width="105.5" height="36.0" class="steel"/>
+<rect x="128.5" y="366.0" width="105.5" height="36.0" class="steel"/>
+<polyline points="234.0,258.0 243.9,262.5 234.0,267.0 243.9,271.5 234.0,276.0 243.9,280.5 234.0,285.0 234.0,289.5" class="thin"/>
+<polyline points="234.0,370.5 243.9,375.0 234.0,379.5 243.9,384.0 234.0,388.5 243.9,393.0 234.0,397.5 234.0,402.0" class="thin"/>
+<rect x="257.5" y="258.0" width="24.5" height="31.5" class="ring"/>
+<rect x="257.5" y="370.5" width="24.5" height="31.5" class="ring"/>
+<polyline points="257.5,258.0 247.6,262.5 257.5,267.0 247.6,271.5 257.5,276.0 247.6,280.5 257.5,285.0 257.5,289.5" class="thin"/>
+<polyline points="257.5,370.5 247.6,375.0 257.5,379.5 247.6,384.0 257.5,388.5 247.6,393.0 257.5,397.5 257.5,402.0" class="thin"/>
+<rect x="272.5" y="264.8" width="90.0" height="13.5" class="steel"/>
+<rect x="259.5" y="289.5" width="18.0" height="81.0" class="steel"/>
+<rect x="268.5" y="318.8" width="148.0" height="22.5" class="steel"/>
+<rect x="382.8" y="303.0" width="27.0" height="45.0" class="steel"/>
+<rect x="387.1" y="303.0" width="18.2" height="18.0" class="cut"/>
+<rect x="409.8" y="314.2" width="6.8" height="31.5" class="steel"/>
+<rect x="373.8" y="312.0" width="4.5" height="36.0" class="steel"/>
+<path d="M378.2,345.8 l2.2,15.8 l-2.2,15.8 M380.5,345.8 l2.2,15.8 l-2.2,15.8" class="spring"/>
+<polyline points="409.8,309.8 413.1,304.4 416.5,315.1 419.9,304.4 423.2,315.1 426.6,304.4 430.0,315.1 433.4,304.4 436.8,315.1 440.1,304.4 443.5,315.1 443.5,309.8" class="spring"/>
+<rect x="371.5" y="186.0" width="27.0" height="117.0" class="steel"/>
+<rect x="387.2" y="303.0" width="18.0" height="18.0" class="steel"/>
+<rect x="295.0" y="73.5" width="180.0" height="112.5" rx="6" class="knob"/>
+<line x1="83.5" y1="330.0" x2="470.5" y2="330.0" class="axis"/>
+<line x1="385.0" y1="465.0" x2="385.0" y2="60.0" class="axis"/>
+<line x1="466.0" y1="330.0" x2="466.0" y2="240.0" class="dim"/>
+<line x1="461.5" y1="330.0" x2="470.5" y2="330.0" class="thin"/>
+<line x1="461.5" y1="240.0" x2="470.5" y2="240.0" class="thin"/>
+<text x="470.0" y="288.0" class="dimt" text-anchor="start">20</text>
+<line x1="466.0" y1="186.0" x2="466.0" y2="240.0" class="dim"/>
+<line x1="461.5" y1="186.0" x2="470.5" y2="186.0" class="thin"/>
+<line x1="461.5" y1="240.0" x2="470.5" y2="240.0" class="thin"/>
+<text x="470.0" y="216.0" class="dimt" text-anchor="start">12</text>
+<line x1="466.0" y1="73.5" x2="466.0" y2="186.0" class="dim"/>
+<line x1="461.5" y1="73.5" x2="470.5" y2="73.5" class="thin"/>
+<line x1="461.5" y1="186.0" x2="470.5" y2="186.0" class="thin"/>
+<text x="470.0" y="132.8" class="dimt" text-anchor="start">25</text>
+<line x1="236.5" y1="429.0" x2="317.5" y2="429.0" class="dim"/>
+<line x1="236.5" y1="433.5" x2="236.5" y2="424.5" class="thin"/>
+<line x1="317.5" y1="433.5" x2="317.5" y2="424.5" class="thin"/>
+<text x="277.0" y="426.0" class="dimt" text-anchor="middle">18 gap</text>
+<line x1="128.5" y1="429.0" x2="236.5" y2="429.0" class="dim"/>
+<line x1="128.5" y1="433.5" x2="128.5" y2="424.5" class="thin"/>
+<line x1="236.5" y1="433.5" x2="236.5" y2="424.5" class="thin"/>
+<text x="182.5" y="426.0" class="dimt" text-anchor="middle">hub 24</text>
+<line x1="236.5" y1="231.0" x2="255.0" y2="231.0" class="dim"/>
+<line x1="236.5" y1="235.5" x2="236.5" y2="226.5" class="thin"/>
+<line x1="255.0" y1="235.5" x2="255.0" y2="226.5" class="thin"/>
+<text x="245.7" y="228.0" class="dimt" text-anchor="middle">4.11</text>
+<line x1="385.0" y1="393.0" x2="396.2" y2="393.0" class="dim"/>
+<line x1="385.0" y1="397.5" x2="385.0" y2="388.5" class="thin"/>
+<line x1="396.2" y1="397.5" x2="396.2" y2="388.5" class="thin"/>
+<text x="390.6" y="390.0" class="dimt" text-anchor="middle">e 2.5</text>
+<line x1="88.0" y1="402.0" x2="88.0" y2="258.0" class="dim"/>
+<line x1="83.5" y1="402.0" x2="92.5" y2="402.0" class="thin"/>
+<line x1="83.5" y1="258.0" x2="92.5" y2="258.0" class="thin"/>
+<text x="84.0" y="333.0" class="dimt" text-anchor="end">32 OD</text>
+<line x1="430.0" y1="105.0" x2="500.0" y2="95.0" class="thin"/>
+<text x="503.0" y="99.0" class="lab" text-anchor="start">(12) knob, 0-170 deg clockwise</text>
+<line x1="389.5" y1="204.0" x2="500.0" y2="130.0" class="thin"/>
+<text x="503.0" y="134.0" class="lab" text-anchor="start">(7) knob shaft 6, eccentric pin 4</text>
+<line x1="403.0" y1="339.0" x2="500.0" y2="250.0" class="thin"/>
+<text x="503.0" y="254.0" class="lab" text-anchor="start">(8) crosshead, slot 4.05 normal to x</text>
+<line x1="430.0" y1="307.5" x2="500.0" y2="210.0" class="thin"/>
+<text x="503.0" y="214.0" class="lab" text-anchor="start">(9) return spring, 10 N</text>
+<line x1="376.0" y1="343.5" x2="500.0" y2="290.0" class="thin"/>
+<text x="503.0" y="294.0" class="lab" text-anchor="start">(10) disc-spring pair + collar</text>
+<line x1="425.5" y1="420.0" x2="500.0" y2="360.0" class="thin"/>
+<text x="503.0" y="364.0" class="lab" text-anchor="start">(1) post 30 x 40, pocket 21 x 14</text>
+<line x1="353.5" y1="271.5" x2="500.0" y2="170.0" class="thin"/>
+<text x="503.0" y="174.0" class="lab" text-anchor="start">(4a) anti-rotation pin 3</text>
+<line x1="182.5" y1="384.0" x2="90.0" y2="500.0" class="thin"/>
+<text x="93.0" y="504.0" class="lab" text-anchor="start">(3) arm hub, 72-tooth face</text>
+<line x1="268.0" y1="393.0" x2="90.0" y2="520.0" class="thin"/>
+<text x="93.0" y="524.0" class="lab" text-anchor="start">(4) sliding ring 18/32 x 6</text>
+<line x1="268.5" y1="366.0" x2="330.0" y2="500.0" class="thin"/>
+<text x="333.0" y="504.0" class="lab" text-anchor="start">(5) cross pin 4</text>
+<line x1="160.0" y1="307.5" x2="90.0" y2="80.0" class="thin"/>
+<text x="93.0" y="84.0" class="lab" text-anchor="start">(2) axle 16/6, slots 4.2 x 10</text>
+<line x1="331.0" y1="325.5" x2="330.0" y2="520.0" class="thin"/>
+<text x="333.0" y="524.0" class="lab" text-anchor="start">(6) pushrod 5</text>
+<text x="40.0" y="560.0" class="small" text-anchor="start">Teeth drawn 4x deep for legibility (true depth 0.55 mm). Hinge axis dash-dot; knob axis vertical at 45 mm from the hinge point, on the hinge axis line.</text>
+<text x="720.0" y="70.0" class="ttl" text-anchor="start">Ring travel s = 2.5 (1 - cos theta) mm</text>
+<line x1="760" y1="390.0" x2="975" y2="390.0" class="grid"/>
+<text x="755.0" y="393.0" class="small" text-anchor="end">0</text>
+<line x1="760" y1="335.5" x2="975" y2="335.5" class="grid"/>
+<text x="755.0" y="338.5" class="small" text-anchor="end">1</text>
+<line x1="760" y1="280.9" x2="975" y2="280.9" class="grid"/>
+<text x="755.0" y="283.9" class="small" text-anchor="end">2</text>
+<line x1="760" y1="226.4" x2="975" y2="226.4" class="grid"/>
+<text x="755.0" y="229.4" class="small" text-anchor="end">3</text>
+<line x1="760" y1="171.8" x2="975" y2="171.8" class="grid"/>
+<text x="755.0" y="174.8" class="small" text-anchor="end">4</text>
+<line x1="760" y1="117.3" x2="975" y2="117.3" class="grid"/>
+<text x="755.0" y="120.3" class="small" text-anchor="end">5</text>
+<line x1="760.0" y1="90" x2="760.0" y2="390" class="grid"/>
+<text x="760.0" y="404.0" class="small" text-anchor="middle">0</text>
+<line x1="795.8" y1="90" x2="795.8" y2="390" class="grid"/>
+<text x="795.8" y="404.0" class="small" text-anchor="middle">30</text>
+<line x1="831.7" y1="90" x2="831.7" y2="390" class="grid"/>
+<text x="831.7" y="404.0" class="small" text-anchor="middle">60</text>
+<line x1="867.5" y1="90" x2="867.5" y2="390" class="grid"/>
+<text x="867.5" y="404.0" class="small" text-anchor="middle">90</text>
+<line x1="903.3" y1="90" x2="903.3" y2="390" class="grid"/>
+<text x="903.3" y="404.0" class="small" text-anchor="middle">120</text>
+<line x1="939.2" y1="90" x2="939.2" y2="390" class="grid"/>
+<text x="939.2" y="404.0" class="small" text-anchor="middle">150</text>
+<line x1="975.0" y1="90" x2="975.0" y2="390" class="grid"/>
+<text x="975.0" y="404.0" class="small" text-anchor="middle">180</text>
+<text x="867.5" y="420.0" class="small" text-anchor="middle">knob angle theta, deg clockwise from loose stop</text>
+<text x="755.0" y="82.0" class="small" text-anchor="end">s, mm</text>
+<polyline class="curve" points="760.0,390.0 762.4,389.9 764.8,389.7 767.2,389.3 769.6,388.7 771.9,387.9 774.3,387.0 776.7,385.9 779.1,384.7 781.5,383.3 783.9,381.8 786.3,380.1 788.7,378.2 791.1,376.2 793.4,374.0 795.8,371.7 798.2,369.3 800.6,366.7 803.0,364.0 805.4,361.1 807.8,358.1 810.2,355.0 812.6,351.7 814.9,348.4 817.3,344.9 819.7,341.3 822.1,337.6 824.5,333.8 826.9,329.9 829.3,325.9 831.7,321.8 834.1,317.7 836.4,313.4 838.8,309.1 841.2,304.7 843.6,300.3 846.0,295.8 848.4,291.2 850.8,286.6 853.2,282.0 855.6,277.3 857.9,272.6 860.3,267.9 862.7,263.1 865.1,258.4 867.5,253.6 869.9,248.9 872.3,244.1 874.7,239.4 877.1,234.7 879.4,230.0 881.8,225.3 884.2,220.6 886.6,216.0 889.0,211.5 891.4,207.0 893.8,202.6 896.2,198.2 898.6,193.9 900.9,189.6 903.3,185.5 905.7,181.4 908.1,177.4 910.5,173.5 912.9,169.7 915.3,166.0 917.7,162.4 920.1,158.9 922.4,155.5 924.8,152.3 927.2,149.2 929.6,146.2 932.0,143.3 934.4,140.6 936.8,138.0 939.2,135.5 941.6,133.2 943.9,131.1 946.3,129.1 948.7,127.2 951.1,125.5 953.5,123.9 955.9,122.6 958.3,121.3 960.7,120.3 963.1,119.3 963.1,119.3"/>
+<line x1="760" y1="166.0" x2="975" y2="166.0" stroke="#2563a8" stroke-dasharray="4 3" stroke-width="1"/>
+<line x1="760" y1="135.5" x2="975" y2="135.5" stroke="#2563a8" stroke-dasharray="4 3" stroke-width="1"/>
+<line x1="915.3" y1="90" x2="915.3" y2="390" stroke="#c2410c" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="939.2" y1="90" x2="939.2" y2="390" stroke="#c2410c" stroke-dasharray="3 3" stroke-width="1"/>
+<line x1="963.1" y1="90" x2="963.1" y2="390" stroke="#c2410c" stroke-dasharray="3 3" stroke-width="1"/>
+<text x="764.0" y="240.0" class="lab" text-anchor="start">release below 130 (sim)</text>
+<text x="764.0" y="255.0" class="lab" text-anchor="start">engage at 150 (sim)</text>
+<text x="764.0" y="270.0" class="lab" text-anchor="start">hard stop 170</text>
+<text x="764.0" y="180.0" class="dimt" text-anchor="start">4.11 tooth tips touch</text>
+<text x="764.0" y="130.5" class="dimt" text-anchor="start">4.67 full depth (+0.55)</text>
+<text x="770.0" y="440.0" class="ttl" text-anchor="start">theta</text>
+<text x="840.0" y="440.0" class="ttl" text-anchor="start">s mm</text>
+<text x="770.0" y="454.0" class="lab" text-anchor="start">0</text>
+<text x="840.0" y="454.0" class="lab" text-anchor="start">0.00</text>
+<text x="770.0" y="468.0" class="lab" text-anchor="start">90</text>
+<text x="840.0" y="468.0" class="lab" text-anchor="start">2.50</text>
+<text x="770.0" y="482.0" class="lab" text-anchor="start">120</text>
+<text x="840.0" y="482.0" class="lab" text-anchor="start">3.75</text>
+<text x="770.0" y="496.0" class="lab" text-anchor="start">130</text>
+<text x="840.0" y="496.0" class="lab" text-anchor="start">4.11</text>
+<text x="770.0" y="510.0" class="lab" text-anchor="start">150</text>
+<text x="840.0" y="510.0" class="lab" text-anchor="start">4.67</text>
+<text x="770.0" y="524.0" class="lab" text-anchor="start">170</text>
+<text x="840.0" y="524.0" class="lab" text-anchor="start">4.96</text>
+<text x="895.0" y="454.0" class="small" text-anchor="start">0.55 mm band</text>
+<text x="895.0" y="468.0" class="small" text-anchor="start">130-150 deg =</text>
+<text x="895.0" y="482.0" class="small" text-anchor="start">one tooth depth</text>
+</svg>

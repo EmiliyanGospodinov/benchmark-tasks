@@ -27,7 +27,9 @@ bases; heights above the table top. Elevation is the arm's angle above horizonta
 | inspection head (black block, orange lens) | 4 x 6 x 3.5 cm, centre 20 cm from the hinge axis | 250 g | — |
 | clamp knob (orange), vertical axis | ridged round, 4 cm diameter, 2.5 cm tall, on a stem 1.2 cm above the post | 120 g | (29.5, 8) cm |
 
-- **Start:** the arm rests on its lower stop, 26 degrees below horizontal, and the knob is loose.
+- **Start:** the arm rests on its lower stop, 26 degrees below horizontal, and the knob is loose. (The arm is
+  spawned 25 degrees below horizontal and settles onto the 26-degree hinge limit before the first control step;
+  the recorded demonstration reports -26.0 degrees from t = 0.05 s.)
 - **Hinge travel:** −26 to +45 degrees.
 - **Target:** +15 degrees. The head centre is then 5.2 cm above the hinge axis, 17.2 cm above the table, so the
   setting can be checked with a ruler.
@@ -54,8 +56,8 @@ The text instruction is the `instruction` field of `task.json`:
 - **Knob:** a revolute joint about z.
   - Viscous damping 2e-4 N m s/deg, capped at 0.5 N m.
   - Stops at 0 (loose) and 170 degrees clockwise. The 170-degree stop is this prototype's chosen travel limit.
-- **Indexed lock:** a 72-tooth serrated lock with 5-degree steps, a nominal original design of the
-  serrated-locking-plate class.
+- **Indexed lock:** a 72-tooth face-serration lock with 5-degree steps; the physical linkage is specified in
+  [Indexed lock](#indexed-lock) below.
   - Engages once the knob has been turned at least 150 degrees clockwise. The teeth mesh at the tooth nearest the
     arm's current angle.
   - Modelled as an angular spring to that tooth angle: 2 N m/deg, damping 0.02 N m s/deg, torque capped at 20 N m.
@@ -67,6 +69,81 @@ The text instruction is the `instruction` field of `task.json`:
   - Tooth shear, wear and breakage are not simulated.
   - The clean free-or-meshed transition is an idealisation: real serrated joints can have some drag before they
     mesh.
+
+## Indexed lock
+
+This is a **proposed original design, consistent with the simulated thresholds. It has not been built or
+tested**, and it is not a commercial part. It shows one reproducible way for the vertical knob to engage and
+release the horizontal hinge with the knob travel the simulation uses.
+
+![Section of the indexed lock and ring travel against knob angle](lock-section.svg)
+
+**Geometry.** The knob's vertical axis (x = 29.5 cm, y = 8 cm) crosses the hinge axis (y = 8 cm, 12 cm high)
+inside the post, 20 mm below the post top. The 45 mm offset between the knob and the hinge point therefore runs
+*along* the hinge axis, and a straight pushrod inside the hinge axle can join them. The arm hub
+(32 mm diameter, x 23.8-26.2 cm) leaves an 18 mm gap to the post's -x face (x 28.0 cm) for a sliding ring.
+
+| # | Part | Material, key dimensions | Function |
+|---|---|---|---|
+| 1 | Post | Steel, 30 x 40 x 140 mm; 6 mm vertical bore on the knob axis; 16 mm horizontal bore on the hinge axis; internal pocket 21 x 14 mm (x 287-308 mm) at hinge height; 3 mm anti-rotation hole | Frame; carries all reactions to the foot plate |
+| 2 | Hinge axle | Steel tube 16 mm OD, 6 mm bore, pressed 7 mm into the post, through the hub to a retaining collar; two slots 4.2 x 10 mm in the gap (x 262-272 mm) | Hinge pin; guides the pushrod |
+| 3 | Arm hub | Steel, 32 mm OD x 24 mm; on its +x face a 72-tooth face serration, annulus 18-32 mm diameter, 90-degree included tooth angle | Rotating half of the lock |
+| 4 | Sliding ring | Hardened steel, 18/32 mm x 6 mm; matching 72-tooth face toward the hub; 3 mm anti-rotation pin (4a) sliding in the post | Non-rotating half of the lock; slides along x |
+| 5 | Cross pin | Steel, 4 mm x 18 mm, through the axle slots and the ring | Couples the pushrod to the ring |
+| 6 | Pushrod | Steel, 5 mm, inside the axle bore from the cross pin to the pocket; collar and nut at its end | Transmits axial travel |
+| 7 | Knob shaft | Steel, 6 mm, from the knob down to hinge height; 4 mm eccentric pin at its lower end, eccentricity e = 2.5 mm | Scotch-yoke crank |
+| 8 | Crosshead | Steel block 6 mm along x, with a 4.05 mm slot normal to x that holds the eccentric pin | Turns knob rotation into travel along x |
+| 9 | Return spring | Extension spring, about 10 N, crosshead to pocket +x wall | Keeps the ring clear of the teeth when loose and removes backlash |
+| 10 | Disc-spring pair | Between collar and crosshead; about 0.3 mm stroke to solid, about 60 N preload at the stop | Absorbs the 150-170 degree overtravel; sets the clamp preload |
+| 11 | Knob detent | Spring ball under the knob, seating at the 170-degree stop | Holds the tightened knob |
+| 12 | Knob | Die-cast, 40 mm x 25 mm, 120 g; stops at 0 and 170 degrees clockwise | Operator input (the existing simulated knob) |
+
+**Knob travel to lock and unlock.** Turning the knob clockwise by θ from its loose stop moves the crosshead, pushrod
+and ring toward the hub by s(θ) = e (1 - cos θ) with e = 2.5 mm. In the unlocked position the tooth tips are
+4.11 mm apart.
+
+| Knob θ | 0 | 90 | 120 | 130 | 150 | 170 (stop) |
+|---|---|---|---|---|---|---|
+| Ring travel s, mm | 0 | 2.50 | 3.75 | 4.11 (tips touch) | 4.67 (full depth) | 4.96 |
+
+- **Lock:** turn clockwise to at least 150 degrees (full tooth depth); the 170-degree stop and the detent hold it.
+  The simulation engages at 150 degrees.
+- **Unlock:** turn back below 130 degrees; the tips clear and the return spring keeps the ring off the hub. The
+  simulation releases below 130 degrees.
+- **Overtravel:** 150 to 170 degrees adds 0.30 mm, taken by the disc springs, and leaves the crank 10 degrees short
+  of dead centre.
+
+**Tooth geometry.** 360 / 72 = 5 degrees per tooth. On the 12.5 mm mean radius the pitch is
+2π x 12.5 / 72 = 1.09 mm; a 90-degree tooth is pitch / 2 = 0.55 mm deep, which equals the 130-150 degree travel
+band (4.67 - 4.11 = 0.56 mm). The flanks centre the arm on the nearest tooth, at most 2.5 degrees away. Fine
+72-tooth face serrations are a machined (wire-EDM or broached) part.
+
+**Force path.** Arm load → hub teeth → ring. From the ring, the tangential force goes through the anti-rotation
+pin into the post; the axial (separating) force goes through the cross pin, pushrod, collar, disc springs,
+crosshead and eccentric pin into the knob shaft, whose bearing is in the post.
+
+| Quantity | Value |
+|---|---|
+| Arm load torque at +15 degrees (60 g bar, centre at 10 cm; 250 g head at 20 cm) | 0.53 N m |
+| Tangential and axial tooth force at that torque (12.5 mm radius, 45-degree flanks) | 42 N each |
+| Knob back-drive torque at the stop (60 N preload + 10 N spring, x e x sin 170°) | 0.03 N m, held by the detent |
+| Knob torque to tighten, peak (near 165 degrees) | about 0.04 N m |
+| Axial force at 5 N m; cross-pin shear (single shear, 4 mm) | 400 N; 32 MPa |
+| **Rated holding torque** | **5 N m**, about 9 x the arm load |
+
+The rating is a hand calculation for this proposed design. Above the 60 N preload, the disc springs reach solid
+after less than 0.1 mm, well short of the 0.55 mm tooth depth, so the teeth cannot ratchet below the rating.
+**The simulation's 20 N m torque cap is a solver parameter, not a strength rating**; at 20 N m this design would
+put 127 MPa on the cross pin and is not rated for it.
+
+**What the simulation abstracts.**
+
+- The linkage (crank, crosshead, pushrod, ring, springs, detent) is reduced to the knob's measured angle → engaged
+  state, with hysteresis: engaged at 150 degrees or more, released below 130 degrees.
+- The teeth are an angular spring and damper to the nearest 5-degree tooth, with no tooth contact. Partial mesh
+  between 130 and 150 degrees, which a real lock would show as drag, is not modelled.
+- The knob is a viscous-damped joint; no tooth or spring reaction is fed back into it.
+- None of the internal parts are rendered or collide; the visible axle stub stops short of the hub (cosmetic).
 
 ## Scoring
 
