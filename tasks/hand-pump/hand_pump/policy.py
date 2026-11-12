@@ -1,13 +1,7 @@
-"""Policy ``hand_pump_scripted``: privileged demonstration (reads simulator part poses and the gas state).
+"""Observation-only hand-pump demo: native overhead RGB and exposed robot joint state.
 
-The right gripper takes the barrel, the left the handle; together they lift the pump off the mat. The left
-gripper then strokes the handle while the right counterholds the barrel, until the chamber reaches the
-manual's 60 kPa: it watches the pressure (privileged gas read, the value the dial shows) and stops the
-stroke as soon as the target is reached. Both put the pump down and release.
-Outputs ordinary 14-D joint targets through the guide's IK; never sets object poses.
-
-``-P mode=idle`` keeps both arms at the ready pose (passive stability check); ``-P mode=nohold`` runs the
-pumping arm alone (the barrel is not held).
+Known station calibration and robot forward/inverse kinematics support Cartesian
+motion. Pressure decisions use only visible dial pixels. No simulator handles.
 """
 import numpy as np
 from inspect_robots.types import Action, ActionChunk
@@ -24,7 +18,6 @@ HANDLE_SQUEEZE = -.017
 LIFT = .040
 TCP_PAD_OFFSET = .013
 MAX_STROKES = 10
-STOP_MARGIN_KPA = 1.0  # stop the stroke once within this of the target
 PUSH_THROUGH = 0.06  # command the handle past the end stop: the compliant arms then press about 5 N
 
 
@@ -33,10 +26,15 @@ def _barrel_point(height=0.0):
     return lambda sim: (pos.copy(), grip_rotation(0.0))
 
 
+def _barrel_x(ctx):
+    """Estimate barrel x from the grasping robot's observed joints and fixed setup."""
+    return ctx.barrel_pos()
+
+
 def _handle_point(height=0.0, extension=d.STROKE):
-    """Handle grip at a given extension, relative to the barrel's actual position (read on entry)."""
+    """Handle grip at a given extension, relative to the barrel's position (read on entry)."""
     def f(sim):
-        b = sim.poses()["barrel"][:3] if sim is not None else d.BARREL_POS
+        b = _barrel_x(sim)
         x = extension(sim) if callable(extension) else extension
         pos = np.array([b[0] + d.MIN_HANDLE_OFFSET + x, d.BARREL_POS[1], d.BARREL_POS[2] + TCP_PAD_OFFSET + height])
         return pos, grip_rotation(0.0)
@@ -85,7 +83,8 @@ def _label_at(segs, t):
     return "done", acc
 
 
-class PumpScriptedPolicy(YamScriptedPolicy):
+class _PumpMotion(YamScriptedPolicy):
+    """Initialize motion plans without any scene access."""
     def __init__(self, mode="coop", **kwargs):
         super().__init__(**kwargs)
         self.mode = str(mode)
@@ -104,19 +103,65 @@ class PumpScriptedPolicy(YamScriptedPolicy):
         self._end = (max(s.duration for s in self._scripts.values()) if p else 8.0) + 3.0
         self._printed = None
 
+# --- observation-only demonstration (REV-A6) ----------------------------------------------------------------
+from inspect_robots_yam.packing import STATE_KEY, split  # noqa: E402
+from yam_arena import ik  # noqa: E402
+
+from . import dial_reader as dr  # noqa: E402
+
+
+
+
+class ObsContext:
+    """Everything the observation-only demo knows: the robot's own joint state and the overhead RGB image."""
+
+    def __init__(self, bases):
+        self.bases, self.q, self.image, self.grasped = bases, None, None, False
+
+    def update(self, observation):
+        left, right = split(np.asarray(observation.state[STATE_KEY], float))
+        self.q = {"left": left, "right": right}
+        self.image = observation.images["top_cam"]
+
+    def tcp(self, arm):
+        return ik.tcp_pose(self.q[arm][:6], self.bases[arm])[0]
+
+    def barrel_pos(self):
+        if not self.grasped:
+            return d.BARREL_POS  # documented fixed start layout (task setup), not a simulator read
+        t = self.tcp("right")
+        return np.array([t[0], d.BARREL_POS[1], d.BARREL_POS[2]])
+
+
+class PumpScriptedPolicy(_PumpMotion):
+    """Observation-only demonstration: robot joint state + native 320x176 overhead RGB. No simulator access."""
+
+    def reset(self, scene):
+        super().reset(scene)
+        self.ctx = ObsContext(self._bases)
+        self.reader = dr.PressureStop()
+        self._stopped = False
+
     def act(self, observation):
-        from . import embodiment
-        sim = embodiment.ACTIVE
+        self.ctx.update(observation)
         t = float(observation.state_time) + self._dt
-        if "left" in self._plans:
+        if "right" in self._plans:
+            rl, _ = _label_at(self._plans["right"], t + self._offset)
+            self.ctx.grasped = self.ctx.grasped or rl in ("lift together", "counterhold")
+        if "left" in self._plans and not self._stopped:
             label, start = _label_at(self._plans["left"], t + self._offset)
-            if label.startswith("compress") and sim.gas.gauge_kpa >= d.TARGET_KPA - STOP_MARGIN_KPA:
-                self._offset = self._lower - t  # target reached: go straight to putting the pump down
-                print(f"[pump-demo] t={t:.2f} chamber at {sim.gas.gauge_kpa:.1f} kPa: stop pumping", flush=True)
+            if label.startswith("compress"):
+                stop, est = self.reader.update(self.ctx.image, pumping=True)
+                if stop:
+                    self._offset = self._lower - t
+                    self._stopped = True
+                    print(f"[pump-demo] t={t:.2f} dial reads {est:.1f} kPa (overhead RGB): stop pumping", flush=True)
+            else:
+                self.reader.update(self.ctx.image, pumping=False)
         actions, labels = [], []
         for arm in ("left", "right"):
             if arm in self._scripts:
-                a, label = self._scripts[arm].act(sim, t + self._offset)
+                a, label = self._scripts[arm].act(self.ctx, t + self._offset)
             else:
                 a, label = np.r_[READY, 1.0], "idle"
             actions.append(a)

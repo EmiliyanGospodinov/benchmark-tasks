@@ -18,12 +18,10 @@ from .scoring import PumpScore
 TASK_FILE = Path(__file__).resolve().parents[1] / "task.py"
 PARTS = ("barrel", "piston", "chamber", "needle")
 FREE = ("barrel", "piston")
-ACTIVE = None  # read only by the declared privileged demonstration policy
 
 
 class PumpEmbodiment(YamArenaEmbodiment):
     def __init__(self, telemetry=None, **kwargs):
-        global ACTIVE
         kwargs.setdefault("task", str(TASK_FILE))
         kwargs.setdefault("object_jitter", 0)
         super().__init__(**kwargs)
@@ -31,7 +29,6 @@ class PumpEmbodiment(YamArenaEmbodiment):
         self.layout = d.start_poses()
         self._trace = None
         self._joint = None
-        ACTIVE = self
 
     def _ensure_sim(self, goal):
         if self._env is not None:

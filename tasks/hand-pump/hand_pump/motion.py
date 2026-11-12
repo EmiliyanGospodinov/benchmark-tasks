@@ -1,4 +1,4 @@
-"""Privileged Cartesian demonstration scaffold reused from our A4 b987934."""
+"""Cartesian motion interpolation and IK using a caller-supplied observation context."""
 from __future__ import annotations
 
 import math
@@ -18,7 +18,7 @@ from . import design as d
 @dataclass
 class Seg:
     duration: float
-    target: Callable | None  # sim -> (pos, rot); None holds the previous pose
+    target: Callable | None  # context -> (pos, rot); None holds the previous pose
     finger: float
     label: str
     freeze: bool = True  # evaluate the target once, on entering the segment

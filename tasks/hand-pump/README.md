@@ -15,12 +15,7 @@ below; loading `task.py` alone with the unextended `yam_arena` embodiment does n
 
 The `instruction` field of `task.json` (also `instruction.txt`):
 
-1. Take hold of the barrel with one gripper and the handle with the other; lift the pump off the mat together.
-2. Keep the barrel still and pump: push the handle in, then pull it fully out; repeat.
-3. Watch the dial. Stop pushing **immediately** when the black needle reaches the red 60 kPa mark (green band
-   54-66 kPa), even partway through a stroke. Never exceed 80 kPa.
-4. Put the pump back on the grey mat with both feet on the mat, open both grippers and move away.
-5. Check the dial again: still within the green band.
+Bring the test chamber pressure into the green 54 to 66 kPa band without ever exceeding 80 kPa. Leave the pump with both feet on the grey mat, release it and move both hands clear; the pressure must remain in the band for two seconds.
 
 ## Setup
 
@@ -66,7 +61,7 @@ opening and its TCP distance to the barrel and handle, and the barrel's height a
 - Ever exceeding 80 kPa caps the score at 0.25.
 - Non-finite states score 0 for that step and restart the hold window.
 - The untouched start scores 0.
-- CPU checks: `python -m pytest tests` in this folder (scorer, mat placement and gas model, 18 tests).
+- CPU checks: `python -m pytest tests` in this folder (scorer, mat placement and gas model, 20 tests).
 
 ## Running
 
@@ -90,17 +85,37 @@ inspect-robots run --embodiment yam_hand_pump --policy hand_pump_scripted \
 - `-E telemetry=<file.jsonl>` writes per-step pressure, piston travel, part poses and scorer inputs.
 - `-P mode=nohold` runs the pumping arm alone; `-P mode=idle` leaves the pump untouched (stability check).
 - **Run limit:** 1,800 steps (90 s at 20 Hz).
-- **Demonstration result:** `task_score` 1.0 in both of two episodes (with a reset between): success after
-  458 and 457 steps (22.9 s and 22.85 s), 61.9 and 62.2 kPa, four strokes, pump back on the mat.
+The observation-only demo reads the native 320x176 overhead RGB image and exposed
+14-D robot joint state. The fixed setup and calibrated robot geometry determine
+approach targets. While holding the barrel, forward kinematics of the right arm
+estimates its x position; no simulator part poses are used. This assumes the
+barrel remains in the grasp and aligned with its initial axis.
 
-**The demonstration is privileged.** It reads part poses and the model's numerical pressure, the value
-the dial displays. It does not read the gauge from the images.
-1. The right gripper takes the barrel and the left takes the handle; they lift the pump 4 cm together.
-2. The left arm strokes while the right counterholds.
-3. Each compression is commanded 6 cm past the end stop, because the position-controlled arms are compliant
-   (about 100 N/m between the two grippers in our measurements). It stops mid-stroke when the chamber
-   reaches 59 kPa.
-4. Both put the pump down and release.
+The dial reader locates the white face using its green band, excludes outer tick
+marks, and finds the darkest ray through the hub. Two consecutive readable
+compression frames estimated at 58–75 kPa trigger lowering and release. The broad
+upper reading bound accommodates pixel uncertainty; it is not an expanded task
+target. The scorer still requires actual pressure of 54–66 kPa and caps credit
+if pressure ever exceeds 80 kPa. Missing/occluded readings never count as success.
+Motion timing selects phases, but no stroke count or stored action trace decides
+when the pressure target has been reached.
+
+CPU tests exercise the controller with simulator access poisoned. To replay
+native recorded images through the exact runtime pressure rule:
+`python tools/dial_gate_v2.py /path/to/run-with-frames-and-telemetry`.
+Telemetry supplies offline truth labels only, never inputs to the policy.
+
+The revised observation-only demo scored **1.0 in both episodes**, including the
+repeat after reset, with seed 0 and the instruction above. Both completed at
+460 steps (23.00 s); retained pressures were 62.534 and 62.537 kPa, and each met
+the continuous two-second final hold. Each episode stopped on the visible dial
+at 17.85 s. The two-episode run took 175 s including startup and reset on the
+local RTX 5090 system. Scene, gas model and scorer are unchanged.
+
+The exact-rule replay on this fresh run produced no below-band stop decisions;
+both first stops occurred at the retained pressures above. Four occluded frames
+per episode were unreadable. Validation covers this fixed camera/layout; this
+small dial reader is not a general calibrated pressure meter.
 
 ## Simulation model
 
@@ -137,7 +152,7 @@ inspect-robots run --embodiment yam_hand_pump --policy dream \
 ```
 
 The Dream policy receives the standard three RGB views and joint state; it does not receive the
-model pressure or the demonstration policy's privileged state access.
+model pressure. The scripted policy also uses only camera images and exposed joint state.
 
 ## License
 
@@ -146,13 +161,7 @@ YAM adapter remain external dependencies under their respective licenses.
 
 ## Media
 
-Dream-1 (`dreamlabs/dream-1-beta`): **0.0**, one episode with seed 0, reaching the 1,800-step limit
-without errors. The pump remained unpressurized. The scripted demonstration scored **1.0** in both
-episodes, including the repeat after reset, using the same instruction, scene and scorer.
-
-Recorded runtime on an RTX 5090: about 178 s wall time for the 90 s Dream episode (including simulator
-startup and inference); about 112 s total for both scripted episodes including startup and reset.
-
-The submission media are the complete Dream run, the full-score demonstration and the initial setup
-image. Each video places left wrist, right wrist and overhead camera views side by side. The media ID
-is assigned on upload.
+The uploaded videos match this instruction and source. Dream-1 (`dreamlabs/dream-1-beta`,
+seed 0, 1,800 steps) scored 0.0: the pump stayed unpressurised. The observation-only
+scripted demo scored 1.0, and 1.0 again after a reset. Each video shows the left wrist,
+right wrist and overhead cameras side by side at the policy's native 320x176.
