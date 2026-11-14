@@ -14,13 +14,12 @@ joints composed with the grasp transform captured from the measured joints at gr
 go, the last estimate. Arms are commanded by position only; there is no integral correction (an integrated
 commanded-minus-measured error winds up while a hand is in contact and pushes the tool).
 
-Screw: the left wrist's measured rotation while it grips the knob gives the knob turns made; times the published
-lead this is the screw advance. The holder rises with that advance (one-way, also with its own measured rise), and
-turning stops once the advance passes the collar's clearance plus 4 mm (at most 11 strokes as a safety cap).
-The camera cannot see the collar's rise while both hands cover the shaft, so this stop is proprioceptive.
+Screw: wrist rotation estimates the screw advance for holder following. Slip makes it an imperfect estimate;
+all 11 bounded turning strokes are executed rather than using wrist motion to assert extraction.
+The later camera gate must confirm the collar left before release.
 
 Camera gate: after the tool has been carried over the tray, the overhead camera must show the shaft flange
-readable and free of orange for 5 consecutive frames before the tool is lowered and the jaws are spread. Until then
+readable and free of the yellow collar for 5 consecutive frames before the tool is lowered and the jaws are spread. Until then
 both arms hold still; if it is not confirmed within 4 s the policy keeps holding and does not release anything.
 
 ``-P stage=idle`` keeps both arms at READY.
@@ -48,7 +47,7 @@ BOSS_SQUEEZE = -0.012
 BAR_OPEN = FINGER_OPEN
 KNOB_SQUEEZE = -0.012
 YAW_START, YAW_END = math.radians(40), math.radians(-90)
-MAX_STROKES = 11  # the submitted demo needed 8; extra strokes are skipped once the measured rise shows clearance
+MAX_STROKES = 11  # bounded full stroke sequence; no wrist-derived early extraction claim
 RISE_DONE = d.COLLAR_CLEAR + 0.004  # holder rise (m) that shows the collar bore has left the shaft
 BODY0 = np.r_[d.FIX, d.TOP + d.FIT_Z]  # published start: body origin on the shaft axis, fitted height, level
 ARMS = ("left", "right")
@@ -294,17 +293,8 @@ class PullerScriptedPolicy(YamScriptedPolicy):
         self._observe(observation)
         self._count_turns()
         t = float(observation.state_time) + self._dt + self._offset
-        if "left" in self._scripts and self.mem.holder_z0 is not None:
-            s = self._scripts["left"]
-            label = s.segs[s.index].label if 0 <= s.index < len(s.segs) else ""
-            rise = self.mem.expected_rise()
-            if label.endswith("descend") and label.startswith("stroke") and rise >= RISE_DONE:
-                acc = sum(v.duration for v in s.segs[:s.index])
-                if t < self._after_strokes:
-                    self._offset += self._after_strokes - max(t, acc)
-                    print(f"[puller-demo] screw advance from measured turns {1000 * rise:.1f} mm >= {1000 * RISE_DONE:.1f}: "
-                          f"collar clear, stop turning ({label})", flush=True)
-                    t = float(observation.state_time) + self._dt + self._offset
+        # Execute the bounded extraction strokes. Wrist turns cannot prove ram
+        # advance when the knob slips; only the later camera gate permits release.
         if "left" in self._scripts and self._gate != "passed":
             s = self._scripts["left"]
             label = s.segs[s.index].label if 0 <= s.index < len(s.segs) else ""
@@ -312,7 +302,7 @@ class PullerScriptedPolicy(YamScriptedPolicy):
                 reading = shaft_view.read((getattr(observation, "images", None) or {}).get("top_cam"))
                 if self._gate == "pending" and self._confirm.update(reading):
                     self._gate = "passed"
-                    print(f"[puller-demo] top camera: shaft flange readable and free of orange, collar left the shaft",
+                    print(f"[puller-demo] top camera: shaft flange readable and free of the yellow collar, collar left the shaft",
                           flush=True)
                 else:
                     if self._gate == "pending":

@@ -56,9 +56,9 @@ def test_full_plan_runs_on_observations_only(monkeypatch):
     assert pol._gate == "passed"
     assert stopped is not None and stopped < 2000  # fits the 2,000-step limit
     assert min(grips[-1]) > 0.99  # both grippers open at the end
-    # the stub robot turns the wrist exactly as commanded, so the screw-advance stop ends turning before the cap
+    # The complete bounded plan is used: wrist slip makes wrist turns insufficient as an early stop.
     assert pol.mem.expected_rise() >= policy.RISE_DONE
-    assert "stroke 11 turn" not in flat
+    assert "stroke 11 turn" in flat
 
 
 def test_unconfirmed_collar_is_never_released(monkeypatch):

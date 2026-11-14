@@ -1,4 +1,4 @@
-"""Overhead-camera check of the shaft flange: is the orange collar still there, gone, or can it not be seen?
+"""Overhead-camera check of the shaft flange: is the yellow collar still there, gone, or can it not be seen?
 
 Pure NumPy on the native 320x176 ``top_cam`` RGB frame; no simulator state. The camera and the fixture are fixed,
 so the flange of the shaft appears in a fixed image window (rows 97-110, columns 141-158, measured on the recorded
@@ -6,7 +6,7 @@ native frames). The window is read only when most of the grey flange is visible:
 makes the window unreadable, and unreadable never counts as "gone".
 
 Limits (measured on recorded frames): the overhead view is about 5.5 mm per pixel and both hands cover the shaft
-while the screw is turned, so this check cannot see the collar's 27 mm rise off the shaft. It can see, once the
+while the screw is turned, so this check cannot see the collar's 28 mm rise off the shaft. It can see, once the
 tool has been carried away, whether the collar left with it or stayed on the shaft.
 """
 from __future__ import annotations
@@ -23,7 +23,7 @@ def classes(img):
     """Orange (collar, knob) and neutral grey (flange) pixel masks; thresholds measured on the native frames."""
     px = np.asarray(img).astype(int)
     r, g, b = px[..., 0], px[..., 1], px[..., 2]
-    orange = (r >= 60) & (r > 1.35 * g) & (g > 1.1 * b) & (r - b > 40)
+    orange = (r >= 60) & (r > 1.05 * g) & (g > 1.4 * b) & (r - b > 40)
     hi, lo = px.max(axis=-1), px.min(axis=-1)
     grey = ((hi - lo) <= 18) & (lo >= 70) & (hi <= 220) & ~orange
     return orange, grey

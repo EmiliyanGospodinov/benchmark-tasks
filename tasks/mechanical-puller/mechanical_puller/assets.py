@@ -108,9 +108,9 @@ def fixture() -> Path:
 
 
 def collar() -> Path:
-    b = _Body("collar", d.MASS["collar"], (0.6, 0.5), com=(0, 0, 0.008))
-    _ring(b, 0.0, d.HUB_H, d.COLLAR_BORE, d.HUB_R, ORANGE)
-    _ring(b, d.HUB_H, d.HUB_H + d.RIM_H, d.COLLAR_BORE, d.COLLAR_R, ORANGE)
+    b = _Body("collar", d.MASS["collar"], (0.6, 0.5), com=(0, 0, d.COLLAR_COM_Z))
+    _ring(b, 0.0, d.HUB_H, d.COLLAR_COLLISION_BORE, d.HUB_R, (0.85,0.67,0.16))
+    _ring(b, d.HUB_H, d.HUB_H + d.RIM_H, d.COLLAR_COLLISION_BORE, d.COLLAR_R, (0.85,0.67,0.16))
     return b.save()
 
 

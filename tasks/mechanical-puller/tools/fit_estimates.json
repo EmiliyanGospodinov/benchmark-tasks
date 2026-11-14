@@ -1,0 +1,92 @@
+{
+  "0.000125": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 53.21582022448774,
+    "force_mu_012_N": 6.385898426938529,
+    "min_contact_reaction_N": 2.2026181481495875,
+    "max_radial_displacement_m": 5e-06
+  },
+  "0.00025": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 60.824647565293,
+    "force_mu_012_N": 7.29895770783516,
+    "min_contact_reaction_N": 16.12583247502937,
+    "max_radial_displacement_m": 5.03048619409781e-06
+  },
+  "0.0005": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 72.67637732627955,
+    "force_mu_012_N": 8.721165279153546,
+    "min_contact_reaction_N": 4.895296978753051,
+    "max_radial_displacement_m": 5.04634218470113e-06
+  },
+  "0.001": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 92.65751703022329,
+    "force_mu_012_N": 11.118902043626795,
+    "min_contact_reaction_N": 0.43744721447523194,
+    "max_radial_displacement_m": 5.038782043286214e-06
+  },
+  "0.0015": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 111.44976683282925,
+    "force_mu_012_N": 13.37397201993951,
+    "min_contact_reaction_N": 1.6946351020975454,
+    "max_radial_displacement_m": 5.031634964796076e-06
+  },
+  "0.002": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 122.53014075241629,
+    "force_mu_012_N": 14.703616890289954,
+    "min_contact_reaction_N": 0.6487692884436743,
+    "max_radial_displacement_m": 5.00904896141889e-06
+  },
+  "high": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 194.33529718726555,
+    "force_mu_012_N": 23.320235662471866,
+    "min_contact_reaction_N": 1.5956459006109447,
+    "max_radial_displacement_m": 6.505421334556674e-06
+  },
+  "low": {
+    "mesh_m": 0.000125,
+    "nodes": 11394,
+    "normal_N": 66.89400740895981,
+    "force_mu_012_N": 8.027280889075177,
+    "min_contact_reaction_N": 0.5733170134114796,
+    "max_radial_displacement_m": 3.520835033136074e-06
+  },
+  "convergence": [
+    {
+      "mesh_m": 0.0005,
+      "nodes": 762,
+      "normal_N": 126.26742766920633,
+      "force_mu_012_N": 15.15209132030476,
+      "min_contact_reaction_N": 13.676415932728528,
+      "max_radial_displacement_m": 5.038581421373459e-06
+    },
+    {
+      "mesh_m": 0.00025,
+      "nodes": 2914,
+      "normal_N": 123.56074816124811,
+      "force_mu_012_N": 14.827289779349773,
+      "min_contact_reaction_N": 3.2584051509013294,
+      "max_radial_displacement_m": 5.022527327106108e-06
+    },
+    {
+      "mesh_m": 0.000125,
+      "nodes": 11394,
+      "normal_N": 122.53014075241629,
+      "force_mu_012_N": 14.703616890289954,
+      "min_contact_reaction_N": 0.6487692884436743,
+      "max_radial_displacement_m": 5.00904896141889e-06
+    }
+  ]
+}

@@ -324,6 +324,10 @@ class PullerEmbodiment(YamArenaEmbodiment):
             if k == "collar" and self.collar_free:
                 continue
             x = c[k]
+            if k == "collar":
+                cap=d.collar_resistance(x)
+                s[0].GetMaxForceAttr().Set(cap)
+                s[0].GetStiffnessAttr().Set(cap/d.STICK_WINDOW)
             if abs(x - s[3]) > s[2]:
                 s[3] = x - math.copysign(s[2], x - s[3])
                 s[0].GetTargetPositionAttr().Set(float(s[3]))

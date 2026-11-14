@@ -41,16 +41,16 @@ same observation contract as the model (see "Demonstration controller").
 The task folder installs a custom embodiment plugin and generates original USD
 geometry locally. It is not an unmodified task-loader-only scene.
 
-Run limit: 100 simulated seconds. The verified observation-only script takes 66.6
-simulated seconds (1,333 actions) per episode. Reset restores all loose bodies and native
+Run limit: 100 simulated seconds. The corrected nominal observation-only script takes 79.4
+simulated seconds (1,588 actions) per episode. Reset restores all loose bodies and native
 joints, screw angle, stick-slip anchors and score history. Seed 0; object jitter
 is disabled so the operator-prepared engagement is reproducible.
 
 ## Inventory and starting arrangement
 
 Coordinates are metres, x forward and y left in the standard station; table
-height is 0.7475 m. All tool parts are original rigid geometry, with nominal metal
-flange, shaft, collar, body, ram, jaws and rest posts, a die-cast metal knob,
+height is 0.7475 m. All tool parts are original rigid geometry: metal flange, ground steel shaft,
+body, ram, jaws and rest posts; an integral iglidur J polymer collar; a die-cast metal knob,
 a black-coated side handle and a rigid green plastic recovery tray. These are
 construction/material descriptions; friction and masses are authored separately. No commercial part or measured hardware is
 claimed. `design.py` is the numeric inventory and `assets.py` specifies geometry,
@@ -59,7 +59,7 @@ collision material and mass properties.
 | Item | Dimensions / mass | Initial placement |
 | --- | --- | --- |
 | Fixed flange and shaft | 100 x 100 x 10 mm flange; shaft radius 6 mm, shoulder 35 mm and centre-cup rim 38 mm above table | x 280, y 40 mm |
-| Orange fitted collar | bore 13 mm; hub diameter 22 mm x 4 mm; rim diameter 44 mm x 10 mm; 30 g | hub bottom 10 mm above table |
+| Yellow integral iglidur J collar | lower 2 mm land bore 11.990 +/-0.002 mm; remainder bore 13 mm; hub diameter 22 mm x 4 mm; rim diameter 44 mm x 10 mm; calculated 22.21 g | hub bottom 10 mm above table |
 | Free puller body | 100 x 16 x 12 mm crossbar; 30 mm boss; 110 mm side handle; 120 g | centre above shaft at 77.5 mm; upright |
 | Orange screw knob | 36 mm diameter x 20 mm; 120 g | 48 mm above body centre |
 | Guided ram | 8 mm tip pad, 5 mm point; 20 g | zero screw extension |
@@ -74,8 +74,38 @@ prismatic ram are coupled with a 12 mm/turn target, 20 kN/m stiffness, 50 Ns/m
 damping and a 60 N drive cap. The target is refreshed at control steps; PhysX
 integrates the drive at physics steps. Elastic drive load gives equal/opposite
 reaction torque on knob and body. This is not resolved thread contact.
-The fitted collar uses an 8 N axial stick-slip model and a native shaft guide;
-the guide disables only when its base has risen 27 mm, clearing the shaft.
+The integral polymer collar has a 10 micrometre nominal diametral interference
+on a 12.000 +/-0.001 mm steel shaft. Its lower 2 mm land has an 11.990 +/-0.002 mm
+free bore; the rest is relieved to 13 mm. It is custom machined from iglidur J
+stock, not a catalogue bushing mounted in its usual housing. No housing or bond
+restrains it. An offline axisymmetric linear-elastic calculation includes the
+stepped flange, free outer boundary and unilateral shaft contact; radial deformation
+is reduced to an axial friction force. Nominal full-overlap resistance is 14.61 N;
+a tabulated normal load decreases with remaining overlap. The shaft guide releases
+when the physical land clears the 38 mm cup rim at 28 mm rise. A 13 mm rigid collision proxy prevents
+micron-scale rigid interpenetration; it is not the physical free bore. The last
+3 mm of shaft is the centre cup: outer diameter12 mm and inner diameter7 mm,
+not a solid journal. Its radial compliance is approximated using the hollow-cylinder
+Lamé expression; solid and cup contact lengths weight their compliance in series
+with the polymer. This reduces initial14.704 N to14.609 N, and full cup-only
+contact to14.471 N. Mixed-contact end effects are not resolved; the compliance
+correction is under2% of the rigid-steel estimate. Resistance stays active through
+the rim, rather than disappearing at the lower35 mm shoulder.
+
+Material source: [igus J data](https://www.igus.com/plastic-bearings/resources/iglide-material-j),
+E=2.4 GPa, density=1.49 g/cm3, dynamic steel friction 0.06-0.18.
+[NSK fits guide](https://www.nsk.com/content/dam/nsk/am/pt_br/product/roller-bearings-/needle-roller-bearings/doc%202.pdf),
+section8.4, describes extraction force from contact pressure, area and friction.
+`tools/axisymmetric_fit.py` and `tools/fit_estimates.json` reproduce the calculation.
+Poisson ratio0.35 and static friction equal to nominal dynamic0.12 are assumptions;
+this is not force calibration. No creep, wear or breakaway aging is represented.
+Mesh refinement from0.5 to0.25 to0.125 mm gives15.15,14.83,14.70 N; the last change
+is0.84%. This is a numerical estimate, not a rigorous error bound. At bore/shaft
+tolerance extremes7-13 micrometre interference, E +/-20%, nu0.30-0.45 and mu0.06-0.18,
+rigid-steel calculated full-overlap resistance spans4.01-34.98 N; steel compliance
+reduces these estimates by less than2%. This parameter study does not
+bound real static breakout. Assembly and dimensions refer to20 C; use measured
+parts at that temperature and record departures.
 Jaw slides have 3 N authored stick-slip resistance. No grasp welds, extraction
 teleports or target-conditioned forces are used. Material friction is authored,
 not calibrated: collar/ram 0.6/0.5 static/dynamic, body 0.8/0.7, jaws 0.9/0.8,
@@ -91,7 +121,7 @@ and TCPs >=80 mm from all loose part origins and the side-handle grip point. Inv
 tool geometry score zero. `scoring.py` defines all checks; there is no hand-count
 or scripted-phase scoring condition.
 
-Matched prepared-scene diagnostics at a07e283 found 29.4 mm extraction with
+Historical diagnostics with the old 8 N model at a07e283 found 29.4 mm extraction with
 counterholding versus 12.7 mm without it over the same eight turning strokes.
 The unsupported tool rotated substantially. This supports counterholding in
 this procedure; it does not prove that all longer one-arm strategies fail.
@@ -108,43 +138,56 @@ It never reads simulator poses or joints, the embodiment or the scorer;
 - Tool pose: the published start pose until the right gripper closes on the end
   grip; afterwards right-hand FK of the measured joints composed with the grasp
   transform captured at that moment. Arms are commanded by position only.
-- Extraction stop: the left wrist joint's measured rotation while it grips the
-  knob gives the turns made; times the 12 mm lead this is the screw advance. The
-  holder rises with it, and turning stops once it exceeds the 27 mm clearance by
-  4 mm (eight strokes in the verified run; eleven strokes is a safety cap). The
-  overhead camera cannot see this rise (about 5.5 mm per pixel, both hands over
-  the shaft), so this stop is proprioceptive: it assumes the knob turns with the
-  wrist. It is close to a stroke count when the knob does not slip.
+- Extraction: all eleven bounded strokes execute. Measured wrist rotation times
+  screw lead guides the holder upward, but can overestimate actual advance when
+  the knob slips. It is a following heuristic, not an extraction measurement.
+  The camera gate must independently confirm the collar left the shaft before
+  release; simulator state is not read by the policy.
 - Camera gate: after the carry, `shaft_view.py` must read the shaft flange as
-  visible and free of orange for five consecutive frames before the tool is
+  visible and free of the yellow collar for five consecutive frames before the tool is
   lowered and the jaws are spread. Unreadable or occluded frames never count; if
   this is not confirmed within 4 s, the arms hold and nothing is released. It was
-  checked on the recorded native frames of four earlier episodes with no false
-  "gone" reading.
-- Parking relies on the grasp transform and the fixed rest position. Its aim
-  includes a +2 mm x offset; the zero y offset was set from the settling
-  measured in the 0.5-scoring development run. Final error in the verified run:
-  0.6 / -2.6 mm and -0.6 / -2.8 mm (x / y) against the 4 mm tolerance. There is no
-  visual feedback on the parked position.
-- The scripted demonstration is deterministic and was verified only at seed 0.
+  checked against the prior failed extraction: the revised mask reads the yellow
+  collar as present in all 340 sampled late-episode frames where it remained on the shaft.
+- Parking relies on the grasp transform and fixed rest position, including a
+  +2 mm x command offset. Corrected nominal final body errors were (+1.83,-2.47)
+  and (+0.23,-2.94) mm in x/y against the 4 mm tolerance; height errors were
+  +0.04/+0.03 mm. There is no visual correction of parked position.
+- The demonstrated layout and seed are fixed. Reset succeeds, but the trajectories
+  are not identical: final screw turns were2.937 and3.513.
 
 ## Evidence
 
-Observation-only controller, run `rev-004`: task score **1.0 / 1.0** (first
-episode and reset repeat), each **1,333 actions / 66.6 s**. 18 CPU tests pass.
-Development run `rev-003` scored 0.5 / 0.5; the tool parked 5.1-5.3 mm off in y
-before the parking aim was corrected. Videos: left wrist | right wrist | top,
-native 960x176, 20 fps, one per episode; handed off separately.
-`render_video.py RUN_DIRECTORY [EPISODE]` renders saved raw frames.
+Corrected nominal run `fit-nominal-003`, runtime commit `d6609a4`: **1.0 / 1.0**,
+including reset repeat, zero errors. Both episodes succeed at79.4 s (1,588 steps)
+within the2,000-step limit. Collar clearance occurs at measured rises28.129 and
+28.017 mm, after clearing the38 mm cup rim. Both final grippers are open, collar
+rests inside the tray, and the unchanged scorer confirms two seconds of released
+stability. All22 CPU checks pass. Videos show left wrist | right wrist | top at
+960x176,20 fps,H.264/yuv420p,1,589 frames/79.45 s each. The setup image is the
+native320x176 top camera. Matching Dream-1 (`dreamlabs/dream-1-beta`) evaluation scored **0.0** in one error-free
+2,000-step episode, seed 0, terminating at the action limit. Its runtime source
+and instruction match this demonstration; the full model-run video is supplied.
 
-The earlier privileged script (run `final-003`, 1.0 / 1.0) is no longer part
-of the package.
+The parameter study is not demonstrated hardware tolerance: an isolated upper
+case (13 micrometre interference,E2.88 GPa,nu0.30,mu0.18, calculated34.71 N)
+scored0.0 in one error-free2,000-step episode. Collar rise reached only0.292 mm;
+the camera correctly refused release. Peak simulated screw-coupling force40.37 N
+does not establish force delivered to the collar or successful tool load transfer.
+The60 N model cap is not a demonstrated robot capability. Only the nominal
+calculated fit has a full-score demonstration; actual breakout, wear and material
+variation are not calibrated by this evidence.
 
-The prepared-scene counterhold comparison predates the tray-spanning cradle;
-it is evidence about that diagnostic setup, not an exhaustive one-arm exclusion
-for the final scene. The script uses both arms for extraction and transport.
+Earlier results (`rev-004`1.0/1.0 and its Dream0.0) used the old unexplained8 N
+fit and are historical, not evidence for this revision. The provisional25 mm
+release versions `fit-nominal-001`0.0/1.0 and `fit-nominal-002`1.0/1.0 also are
+superseded by the corrected28 mm source. Earlier counterhold comparisons predate
+both this fit and the tray rest; they do not establish an exhaustive one-arm
+exclusion for the present task.
 
-Dream-1 with the revised instruction scored 0.0 (2,000 steps, seed 0).
+`render_video.py RUN_DIRECTORY [EPISODE]` renders raw frames. It is an optional
+development helper requiring `imageio` and its FFmpeg backend, already present
+in the validated stack; they are not needed by task physics or scoring.
 
 ## Attribution
 
@@ -152,3 +195,16 @@ Original task geometry and scripts. Station-wrapper and manipulation helpers
 were adapted from earlier team task prototypes, using the organizer's YAM
 adapter. No external mesh assets are bundled. Original task code and generated geometry are MIT-licensed; see `LICENSE`.
 Upstream runtime dependencies retain their own licenses.
+
+## Response to the fit review
+
+The [latest review](https://github.com/robocurve/benchmark-tasks/pull/369#issuecomment-6872582744)
+correctly identified that a 13 mm metal bore around a 12 mm shaft could not
+produce the previously specified 8 N resistance. This revision replaces that
+unsupported fit with the specified integral polymer interference land and
+geometry-derived elastic/contact model described above. The 13 mm collision
+proxy is explicitly distinguished from the physical 11.990 mm free land bore.
+Nominal extraction and released recovery are demonstrated through the complete
+38 mm shaft/cup geometry. Force estimates are calculated, not measured.
+
+Matching model-run, full-score demonstration and setup image: media `M-YHNVC3`.

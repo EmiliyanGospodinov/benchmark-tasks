@@ -79,3 +79,36 @@ def test_zero_quaternion_returns_zero_without_exception():
     for key in final_poses():
         s=PullerScore();extracted(s);p=final_poses();p[key][3:]=0
         assert s.update(p,2.6,True,[1,1],[[0,0,0],[0,0,0]])==0
+
+
+def test_physical_land_contact_overlap():
+    assert d.collar_overlap(0)==d.COLLAR_LAND_H
+    assert abs(d.collar_overlap(.027)-.001)<1e-12
+    assert d.collar_overlap(.028)==0
+    assert d.collar_overlap(.030)==0
+    assert 14<d.collar_resistance(0)<16
+    assert 0<d.collar_resistance(.027)<d.collar_resistance(0)
+    assert d.collar_resistance(.028)==0
+
+
+def test_physical_fit_and_mass():
+    assert d.COLLAR_FREE_BORE_D<2*d.SHAFT_R<2*d.COLLAR_COLLISION_BORE
+    assert .022<d.MASS['collar']<.023
+    assert d.COLLAR_COM_Z>0 and d.COLLAR_COM_Z<d.HUB_H+d.RIM_H
+
+
+def test_yellow_collar_camera_is_present():
+    from mechanical_puller import shaft_view
+    import numpy as np
+    frame=np.full((176,320,3),120,dtype=np.uint8)
+    frame[100:104,146:150]=[160,130,60]
+    assert shaft_view.read(frame)=='on'
+
+
+def test_cup_rim_remains_in_contact():
+    assert abs(d.COLLAR_CLEAR-.028)<1e-12
+    assert d.collar_overlap(.025)==d.COLLAR_LAND_H
+    # Remaining contact above the solid shoulder is on the hollow steel cup.
+    assert d.collar_resistance(.025)>0
+    assert d.collar_resistance(.025)<d.collar_resistance(0)
+    assert d.collar_resistance(.028)==0
